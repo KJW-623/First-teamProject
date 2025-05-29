@@ -1,0 +1,87 @@
+
+
+
+/* 로그인 페이지 */
+.Container {
+    width: 550px !important;
+    max-width: 100vw;
+    flex-shrink: 0;
+    height: 100vh;
+    background-color: whitesmoke;
+    border-radius: 0 !important;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;      
+    justify-content: center; 
+    text-align: center;
+    margin: 0 auto;
+}
+
+.auth-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('https://cdn.pixabay.com/photo/2016/11/01/11/01/water-1787896_640.jpg') no-repeat center center/cover;
+    z-index: -1;
+    opacity: 1;
+    pointer-events: none;
+}
+
+.inputEmail {
+    right: 50px;
+    position: relative;
+}
+
+
+.fundflow-title {
+    position: absolute;
+    top: 90px; 
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 4rem;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0;
+    background: url('https://cdn.pixabay.com/photo/2016/11/01/11/01/water-1787896_640.jpg') no-repeat center center/cover;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 1;
+    width: auto;
+    text-align: center;
+}
+
+/*       다른 방법으로 로그인       */
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 32px 0 16px 0;
+    color: #888;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+    margin: 0 12px;
+}
+
+/*     이미지     */
+
+.loginOtherWay {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #eaf1ff;
+}

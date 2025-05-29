@@ -1,0 +1,81 @@
+.title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(32, 233, 166);
+    margin-top: 40px;
+    margin-bottom: 24px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.srh-pw-container {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 32px 24px;
+    background: #f7f9fa;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    text-align: center;
+}
+
+.srh-pw-container h2 {
+    margin-bottom: 12px;
+    color: #222;
+}
+
+.srh-pw-container h4 {
+    margin-bottom: 24px;
+    color: #555;
+}
+
+.input-row {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+label {
+    width: 110px;
+    margin-right: 10px;
+    font-weight: bold;
+    text-align: right;
+}
+
+input[type="text"] {
+    width: 200px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    padding: 10px 32px;
+    background-color: rgb(32, 233, 166);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(32, 200, 140);
+}
+
+.result, .error {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.result {
+    color: #2d7a2d;
+}
+
+.error {
+    color: #d32f2f;
+}

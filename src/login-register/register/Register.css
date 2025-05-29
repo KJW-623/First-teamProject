@@ -1,0 +1,57 @@
+.auth-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('https://cdn.pixabay.com/photo/2016/11/01/11/01/water-1787896_640.jpg') no-repeat center center/cover;
+    z-index: -1;
+    opacity: 1;
+    pointer-events: none;
+}
+
+.inputEmail {
+    right: 50px;
+    position: relative;
+}
+
+form > div {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+label {
+    display: inline-block;
+    width: 120px;
+    text-align: right;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    width: 200px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    padding: 10px 32px;
+    background-color: #4b8df8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: #357ae8;
+}
