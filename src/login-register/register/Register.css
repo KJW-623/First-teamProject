@@ -4,11 +4,13 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: url('https://cdn.pixabay.com/photo/2016/11/01/11/01/water-1787896_640.jpg') no-repeat center center/cover;
+    background: url('https://img.freepik.com/free-vector/watercolor-mint-background_23-2150240063.jpg?semt=ais_hybrid&w=740') no-repeat center center/cover;
     z-index: -1;
     opacity: 1;
     pointer-events: none;
 }
+
+
 
 .inputEmail {
     right: 50px;
@@ -54,4 +56,58 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     background-color: #357ae8;
+}
+
+/* 패드(768px~1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .Container {
+        width: 90vw;
+        max-width: 600px;
+        padding: 32px 16px 24px 16px;
+    }
+    .fundflow-title {
+        font-size: 2.2rem;
+    }
+}
+
+/* 폰(360px~767px) */
+@media (max-width: 767px) {
+    .Container {
+        width: 98vw;
+        max-width: 99vw;
+        min-width: unset;
+        padding: 18px 4vw 18px 4vw;
+        border-radius: 0;
+        margin: 0 auto;
+        box-shadow: none;
+    }
+    .fundflow-title {
+        font-size: 1.5rem;
+    }
+    label {
+        width: 80px;
+        font-size: 0.95rem;
+    }
+    input[type="email"],
+    input[type="password"],
+    input[type="text"] {
+        width: 100%;
+        min-width: 0;
+        font-size: 1rem;
+    }
+    button[type="submit"] {
+        width: 100%;
+        font-size: 1rem;
+        padding: 10px 0;
+    }
+    .inputEmail {
+        flex-direction: column;
+        align-items: flex-start;
+        right: 0;
+    }
+    form > div {
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+    }
 }

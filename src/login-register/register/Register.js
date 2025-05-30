@@ -2,6 +2,7 @@ import React from "react";
 import "./Register.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import whiteLogo from "../../images/화이트 로고.png";
 
 function Register() {
     const [ email, setEmail ] = React.useState("");
@@ -36,8 +37,15 @@ function Register() {
     return (
         <div style={{ position: "relative", minHeight: "100vh" }}>
             <div className="auth-bg"></div>
-            <div className="Container">
+            <div className="Navbar">
+                <img
+                    src={whiteLogo}
+                    alt="FundFlow Logo"
+                    className="navbar-logo"
+                />
                 <h1 className="fundflow-title">FundFlow</h1>
+            </div>
+            <div className="Container">
                 <h3>간편하게 회원가입하세요</h3>
                 <form onSubmit={handleSubmit}>
                     <div className="inputEmail">
