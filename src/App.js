@@ -1,11 +1,21 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import Login from "./login-register/login/login";
+import Login from "./login-register/login/Login";
 import Register from "./login-register/register/Register";
 import FoundID from "./search-ID&PW/searchID/srhID";
 import FoundPW from "./search-ID&PW/searchPW/srhPW";
+import React, { useState, useEffect } from "react";
+import PageLoading from "./pageLoading/PL";
 
 function App() {
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => setLoading(false), 2000);
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (loading) return <PageLoading />;
+
     return (
         <Router>
             <Routes>
