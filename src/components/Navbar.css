@@ -1,0 +1,72 @@
+* {
+    
+}
+.headerLayout {
+    background-color: #20e9a5;
+    width: 100%;    
+    font-size: 10px;
+    height: 110px;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.logo {
+    display: flex;
+    margin: 0 ;
+    align-items: center;
+    align-content: center;
+}
+
+
+.login-botton {
+    display: flex;    
+}
+
+
+.project {
+    padding: 10px;
+    align-content: center;
+}
+
+.login {
+    padding-left: 10px;
+    padding-right: 10px; 
+    border-color: gainsboro;    
+    border-style: solid;    
+    align-content: center;
+}
+
+
+.head-category {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-category {
+    background-color: white;
+}
+
+.menu-list {
+    display: flex;
+    text-align: start;
+}
+.menu-list li{    
+    padding: 10px;
+    list-style-type: none;
+}
+
+.category-bars {
+
+}
+
+.mainsearch {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+
