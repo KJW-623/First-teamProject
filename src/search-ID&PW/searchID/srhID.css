@@ -1,47 +1,67 @@
-.title {
-    text-align: center;
-    font-size: 100px;
-}
 
+.srh-id-outer {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f7f9fa;
+}
 
 .srh-id-container {
     max-width: 400px;
-    margin: 80px auto;
+    width: 100%;
+    margin: 0 auto;
     padding: 32px 24px;
     background: #f7f9fa;
     border-radius: 12px;
     box-shadow: 0 4px 16px rgba(0,0,0,0.08);
     font-family: 'Segoe UI', Arial, sans-serif;
     text-align: center;
+    position: relative;
 }
 
-.srh-id-title {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 24px;
-    color: #4b8df8;
+.mintLogo {
+    height: 120px;
+    margin: 0 auto 16px auto;
+    display: block;
+    position: static;
+    left: auto;
+    top: auto;
+    transform: none;
+    padding: 0;
 }
 
 .input-row {
-    margin-bottom: 20px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 label {
-    width: 80px;
-    margin-right: 10px;
+    width: auto;
+    margin-right: 0;
+    text-align: center;
+    margin-bottom: 6px;
     font-weight: bold;
-    text-align: right;
+    font-size: 1rem;
+}
+
+.EmailINPUT {
+    position: relative;
+    right: 25px;
 }
 
 input[type="email"] {
-    width: 200px;
+    width: 60%;
+    min-width: 0;
+    font-size: 1rem;
+    box-sizing: border-box;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 6px;
-    font-size: 16px;
 }
 
 button[type="submit"] {
@@ -71,4 +91,31 @@ button[type="submit"]:hover {
 
 .error {
     color: #d32f2f;
+}
+
+
+@media (max-width: 767px) {
+    .input-row {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    label {
+        width: auto;
+        margin-right: 0;
+        text-align: center;
+        margin-bottom: 6px;
+        font-size: 1rem;
+    }
+    input[type="email"] {
+        width: 100%;
+        min-width: 0;
+        font-size: 1rem;
+        box-sizing: border-box;
+    }
+    .srh-id-container {
+        padding-left: 8vw;
+        padding-right: 8vw;
+    }
 }
