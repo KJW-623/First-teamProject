@@ -134,7 +134,7 @@
 
 .content-column .with-icon .icon-new {
     display: inline-block;
-    background-color: #ff5757;
+    background-color: #20e9a5;
     color: white;
     font-size: 0.7em;
     padding: 2px 5px;
@@ -144,7 +144,7 @@
 }
 
 .content-column .highlight-link a {
-    color: #ff5757;
+    color: #20e9a5;
     font-weight: bold;
 }
 
@@ -195,7 +195,7 @@
 }
 
 .cs-time-image .highlight-time {
-    color: #ff5757;
+    color: #20e9a5;
     font-weight: bold;
 }
 
