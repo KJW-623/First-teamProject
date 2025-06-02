@@ -1,0 +1,104 @@
+.help-center-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+main {
+    flex-grow: 1;
+    max-width: 960px; 
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%; 
+}
+
+.search-section {
+    background-color: #f7f7f7;
+    background-image: url('https://cdn.pixabay.com/photo/2016/07/21/11/17/drink-1532300_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    text-align: center;
+    color: #333;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.search-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #e0f2f7, #c1e7f3, #a2dbef);
+    opacity: 0.8;
+    z-index: 0;
+}
+
+.search-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDcwMCA0MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0zNTAgMTUwQzQ1MCAxNTAgNTAwIDAgNzAwIDBMNzAwIDQwMEwwIDQwMEwwIDE1MEMyMDAgMTUwIDI1MCAxNTkgMzUwIDE1MFoiIGZpbGw9IiNEQ0VCRTkiLz4KPHBhdGggZD0iTTUwMCA1MEM2NTAgNTAgNzAwIDE1MCA3MDAgMTUwVjQwMEwwIDQwMEwwIDUwQzE1MCA1MCAyMDAgNTAgNTAwIDUwWiIgZmlsbD0iI0YzRjRGNCIvPgo8cGF0aCBkPSJNMzUwIDUwQzQ1MCA1MCA1MDAgMTAwIDcwMCAxMDBWNDAwTDAgNDAwTDAgNTBDMjAwIDUwIDI1MCA1MCAzNTAgNTBaIiBmaWxsPSIjREREREREIi8+CjxwYXRoIGQ9Ik0wIDUwSDEzMkwxMzA1LjcgNDA3LjM5NUw3MDAgNDA3LjM5NUw3MDAgMEwwIDBaIiBmaWxsPSIjRDREMzQyIi8+CjxwYXRoIGQ9Ik0wIDIyMEg4Mkw1OTEuNyAzOTcuMzg3TDcwMCA0MDcuMzg3TDcwMCAwTDAgMFYyMjBaIiBmaWxsPSIjREREREREIi8+CjxwYXRoIGQ9Ik0wIDI2MEg1Mkw1NzMuNyA0MDcuMzg3TDcwMCA0MDcuMzg3TDcwMCAwTDY3MCAyNjBMNDcwIDI2MEwwIDI2MFYyNjBaIiBmaWxsPSIjRUVFRUVFIi8+CjxwYXRoIGQ9Ik0wIDMwMEg0MEw1NzYuNyA0MDcuMzg3TDcwMCA0MDcuMzg3TDcwMCAwTDY1MCAzMDBMMjcwIDMwMEwwIDMwMFYyNjBaIiBmaWxsPSIjRjNGNEY0Ii8+CjxwYXRoIGQ9Ik0wIDMwMEg0MEw1NzYuNyA0MDcuMzg3TDcwMCA0MDcuMzg3TDcwMCAwTDY1MCAzMDBMMjcwIDMwMEwwIDMwMFYyNjBaIiBmaWxsPSIjRjNGNEY0Ii8+CjxwYXRoIGQ9Ik0wIDQwMEw3MDAgNDAwTDI1MCAxNTBDMTAwIDE1MCA1MCAxMDYgMCAxMDZWMzAwWiIgZmlsbD0iI0QyRTFGMiIvPgo8cGF0aCBkPSJNMzQwIDE5M0M0MjUgMTkzIDQ3My40MDYgMTM2LjY1MSA1MDkgMTM2Ljc1QzU4MS41ODkgMTM2Ljg4IDYyOC44NjUgMTgwLjYxIDY3MiAxOTRDNzA1LjU2MSAxOTQuODQ5IDcwMC44MDkgMjQwLjQ0NyA2OTkgMjQwLjgwNEM2NjkuMDY0IDI1Mi4wMyA1ODUuOTU1IDI1OC4zMDIgNTEyIDI1OC41MjJDNDIzLjA0NCAyNTguNzg4IDMxMi40MTcgMjU2LjY1NyAyMzAgMjU4LjU1QzE4My4xMyAyNTkuNzM3IDIzLjQ1NCAyNTMuNjU4IDE0IDI1MC4zMDhDNCAyNDcuMjUzIDAtMjA2IDAtMTAzQzAgLTI1LjA2MyA3Mi4wMjEgMTczIDM0MCAxOTNaIiBmaWxsPSIjRjlGN0YwIi8+CjxwYXRoIGQ9Ik0zMzAgMjA5QzQxNSA2MyA0NjMuNDA2IDI2LjY1MSA1MDkgMjYuNzVDNTgxLjU4OSAyNi44OCA2MjguODY1IDcwLjYxIDY3MiA4NEM3MDUuNTYxIDg0Ljg0OSA3MDAuODA5IDEzMC40NDcgNjk5IDEzMC44MDRDNjY5LjA2NCAxNDIuMDMgNTg1LjkwNyAxNDguMzA3IDUxMiAxNDguNTIyQzQyMy4wNDQgMTQ4Ljc4OCAzMTIuNDE3IDE0Ni42NTcgMjMwIDE0OC41NUwxODMuMTMgMTQ5LjczNyAyMy40NTQgMTQzLjY1OCAxNCAxNDAuMzA4QzQgMTM3LjI1MyAwIC02IDAtNjNDMCA0NS4wNjMgNzIuMDIxIDYzIDM0MCA4NFYyMDlaIiBpbGw9IiNGQUYzRjYiLz4KPHBhdGggZD0iTTM0MCAzNTNDNDI1IDYwIDQ2My40MDYgMjcuNjUxIDUwOSAyNy43NUM1ODEuNTg5IDI3Ljg4IDYyOC44NjUgNzAuNjEgNjcyIDg0QzcwNS41NjEgODQuODQ5IDcwMC44MDkgMTMwLjQ0NyA2OTkgMTMwLjgwNEM2NjkuMDY0IDE0Mi4wMyA1ODUuOTU1IDE0OC4zMDcgNTEyIDE0OC41MjJDNDIzLjA0NCAxNDguNzg4IDMxMi40MTcgMTQ2LjY1NyAyMzAgMTQ4LjU1QzE4My4xMyAxNDkuNzM3IDIzLjQ1NCAxNDMuNjU4IDE0IDE0MC4zMDhDNCAxMzcuMjUzIDAtNiAwLTYzQzAgNDUuMDYzIDcyLjAyMSA2MyAzNDAgODRWMjA5WiIgZmlsbD0iI0Y3RjdGOSIvPgo8L3N2Zz4=');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+    z-index: 1;
+}
+
+.search-section h2 {
+    position: relative;
+    z-index: 2;
+    font-size: 32px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #333;
+}
+
+.search-section p {
+    position: relative;
+    z-index: 2;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.faq-section, .contact-section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+}
+
+.faq-section h2, .contact-section h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-section p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+    .faq-section {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: 30px;
+    }
+}
