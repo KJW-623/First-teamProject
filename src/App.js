@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 import PageLoading from "./pageLoading/PL";
 import InfoBanner from "./informationBanner/infoBanner";
 import HelpCenterPage from "./customerservice/HelpCenterPage";
-import Payment from "./payment/Payment";
+import PaymentPage from "./payment/PaymentPage";
 import Community from "./community/Community";
 import ProjectForm from "./create/ProjectForm";
 
@@ -32,7 +32,7 @@ function App() {
                 <Route path="/FoundPW" element={<FoundPW />} />
                 <Route path="/HelpCenter" element={<HelpCenterPage />} />
                 <Route path="/ProjectCreate" element={<ProjectForm />} />
-                <Route path="/project-payment" element={<Payment />} />
+                <Route path="/Payment" element={<PaymentPage />} />
                 <Route path="/creator-community" element={<Community />} />
             </Routes>
             <InfoBanner />

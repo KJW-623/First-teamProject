@@ -1,10 +1,10 @@
-import './Payment.css';
+import './PaymentPage.css';
 
-function Payment() {
+function PaymentPage() {
     return (
         <div>
             <h2>결제창 페이지입니다.</h2>
         </div>
     )
 }
-export default Payment;
+export default PaymentPage;
