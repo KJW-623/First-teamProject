@@ -1,3 +1,5 @@
+import './CategoryFilter.css';
+
 function CategoryFilter({ categories, selectedCategory, onSelectCategory }) {
     return (
         <div className="category-filter">

@@ -1,0 +1,16 @@
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.no-results {
+    text-align: center;
+    color: #777;
+    font-size: 16px;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 20px;
+}

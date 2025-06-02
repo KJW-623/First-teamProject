@@ -9,10 +9,10 @@
 
 main {
     flex-grow: 1;
-    max-width: 960px; 
+    max-width: 960px;
     margin: 0 auto;
     padding: 20px;
-    width: 100%; 
+    width: 100%;
 }
 
 .search-section {
@@ -28,7 +28,7 @@ main {
     border-bottom: 1px solid #eee;
     margin-bottom: 40px;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .search-section::before {
@@ -74,15 +74,17 @@ main {
     margin-bottom: 30px;
 }
 
-.faq-section, .contact-section {
+.faq-section,
+.contact-section {
     background-color: #fff;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     margin-bottom: 40px;
 }
 
-.faq-section h2, .contact-section h2 {
+.faq-section h2,
+.contact-section h2 {
     font-size: 24px;
     color: #333;
     margin-bottom: 20px;

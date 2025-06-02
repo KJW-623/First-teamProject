@@ -5,6 +5,7 @@ import { faqData, categories } from './faqData';
 import ContactForm from './ContactForm.js';
 import CategoryFilter from './CategoryFilter.js';
 import './HelpCenterPage.css';
+import Header from './Header.js';
 
 function HelpCenterPage() {
     const [currentFaqs, setCurrentFaqs] = useState([]);
@@ -38,9 +39,7 @@ function HelpCenterPage() {
 
     return (
         <div className="help-center-page">
-            <header className="header">
-                <h1>Help Center</h1>
-            </header>
+            <Header />
             <main>
                 <section className="search-section">
                     <h2>무엇을 도와드릴까요?</h2>

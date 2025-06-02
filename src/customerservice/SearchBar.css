@@ -28,10 +28,10 @@
     background: #20e9a5;
     border: none;
     cursor: pointer;
-    padding: 10px 15px;
-    height: 35px;
+    padding: 0 15px;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 40px;
 }
