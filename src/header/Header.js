@@ -1,7 +1,14 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
+
+    const location = useLocation();
+    const shouldHideHeader = location.pathname === '/login' || location.pathname === '/HelpCenter';
+
+    if (shouldHideHeader) {
+        return null;
+    }
     return (
         <header className="main-header">
             <div className="header-top">

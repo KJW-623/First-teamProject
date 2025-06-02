@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import Login from "./login-register/login/Login";
 import Register from "./login-register/register/Register";
 import FoundID from "./search-ID&PW/searchID/srhID";
@@ -10,9 +10,9 @@ import HelpCenterPage from "./customerservice/HelpCenterPage";
 import PaymentPage from "./payment/PaymentPage";
 import Community from "./community/Community";
 import ProjectForm from "./create/ProjectForm";
+import Header from "./header/Header";
 
 function App() {
-    
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -24,6 +24,7 @@ function App() {
 
     return (
         <Router>
+            <Header />
             <Routes>
                 <Route path="/" element={<Navigate to="/login" replace />} />
                 <Route path="/login" element={<Login />} />
