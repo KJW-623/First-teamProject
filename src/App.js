@@ -5,7 +5,7 @@ import FoundID from "./search-ID&PW/searchID/srhID";
 import FoundPW from "./search-ID&PW/searchPW/srhPW";
 import React, { useState, useEffect } from "react";
 import PageLoading from "./pageLoading/PL";
-import Navbar from "./navbar/Navbar";
+//import Navbar from "./navbar/Navbar";
 
 function App() {
     const [ loading, setLoading ] = useState(true);
