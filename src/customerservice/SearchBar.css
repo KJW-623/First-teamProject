@@ -12,7 +12,7 @@
 
 .search-bar input {
     flex-grow: 1;
-    padding: 10px 20px;
+    padding: 0px 20px;
     border: none;
     border-radius: 8px;
     font-size: 16px;
@@ -29,6 +29,8 @@
     border: none;
     cursor: pointer;
     padding: 0 15px;
+    margin-right: 10px;
+    margin-bottom: 10px;
     color: white;
     display: flex;
     align-items: center;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import ImageUpload from './ImageUpload';
 import ProjectPreview from './ProjectPreview';
 import './ProjectForm.css';

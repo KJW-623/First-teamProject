@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import './ImageUpload.css'; // 스타일링을 위한 CSS 파일 (선택 사항)
+import { useState, useEffect } from 'react';
+import './ImageUpload.css';
 
 function ImageUpload({ onImageChange, currentImage }) {
     const [previewUrl, setPreviewUrl] = useState(null);
@@ -12,7 +12,6 @@ function ImageUpload({ onImageChange, currentImage }) {
             };
             reader.readAsDataURL(currentImage);
         } else if (typeof currentImage === 'string' && currentImage.startsWith('http')) {
-            // 이미 URL로 제공되는 이미지 (예: 이전에 저장된 이미지)
             setPreviewUrl(currentImage);
         } else {
             setPreviewUrl(null);
@@ -22,7 +21,7 @@ function ImageUpload({ onImageChange, currentImage }) {
     const handleFileChange = (e) => {
         const file = e.target.files[0];
         if (file) {
-            onImageChange(file); // 부모 컴포넌트로 File 객체 전달
+            onImageChange(file);
         } else {
             onImageChange(null);
         }

@@ -1,12 +1,11 @@
-import React from 'react';
-import './ProjectPreview.css'; // 스타일링을 위한 CSS 파일 (선택 사항)
+import './ProjectPreview.css';
 
 function ProjectPreview({ project }) {
     const imageUrl = project.mainImage instanceof File
         ? URL.createObjectURL(project.mainImage)
         : (typeof project.mainImage === 'string' && project.mainImage.startsWith('http')
             ? project.mainImage
-            : '/images/default-thumbnail.png'); // 기본 이미지 경로 설정 (옵션)
+            : '/images/default-thumbnail.png');
 
     return (
         <div className="project-preview-card">
@@ -23,7 +22,6 @@ function ProjectPreview({ project }) {
                     <h4>프로젝트 설명:</h4>
                     <p>{project.description || '설명을 입력해주세요'}</p>
                 </div>
-                {/* 필요하다면 여기에 펀딩 진행률, 남은 기간 등 추가 */}
             </div>
         </div>
     );
