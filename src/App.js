@@ -3,13 +3,13 @@ import Login from "./login-register/login/Login";
 import Register from "./login-register/register/Register";
 import FoundID from "./search-ID&PW/searchID/srhID";
 import FoundPW from "./search-ID&PW/searchPW/srhPW";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import PageLoading from "./pageLoading/PL";
 import InfoBanner from "./informationBanner/infoBanner";
-import CustomerService from "./customerservice/CustomerService";
-import Create from "./create/Create";
+import HelpCenterPage from "./customerservice/HelpCenterPage";
 import Payment from "./payment/Payment";
 import Community from "./community/Community";
+import ProjectForm from "./create/ProjectForm";
 
 function App() {
     
@@ -30,8 +30,8 @@ function App() {
                 <Route path="/register" element={<Register />} />
                 <Route path="/FoundID" element={<FoundID />} />
                 <Route path="/FoundPW" element={<FoundPW />} />
-                <Route path="/customer-service" element={<CustomerService />} />
-                <Route path="/project-create" element={<Create />} />
+                <Route path="/HelpCenter" element={<HelpCenterPage />} />
+                <Route path="/ProjectCreate" element={<ProjectForm />} />
                 <Route path="/project-payment" element={<Payment />} />
                 <Route path="/creator-community" element={<Community />} />
             </Routes>
