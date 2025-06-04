@@ -7,8 +7,8 @@ import Details from './components/Details';
 function App() {
   return (
 //<ProductAll/>
-//<Navbar/>
-<Details/>
+<Navbar/>
+//<Details/>
 
 
 
