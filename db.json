@@ -1,0 +1,124 @@
+{
+    "products":[
+        {
+            "id":0,
+            "imgSrc":"/images/주술회전.png",
+            "brand":"",
+            "title":"주술회전 공식 라이선스 굿즈 신제품 출시!",
+            "percent":407,
+            "choice":true,
+            "new":true            
+        },
+
+        {
+            "id":1,
+            "imgSrc":"/images/여행의시.jpg",
+            "title":"다시, 여행의 시작 '교집합' 여름 컬렉션",
+            "brand":"",
+            "percent":757,
+            "choice":true,
+            "new":true
+        },
+
+        {
+            "id":2,
+            "imgSrc":"/images/저승을담은.png",
+            "title":"옥춘과 저승을 담은 [여름 스트릿 11종]",
+            "brand":"",
+            "percent":353,
+            "choice":true,
+            "new":true
+        },
+
+        {
+            "id":3,
+            "imgSrc":"/images/찻잎.png",
+            "title":"[1잔에 찻잎 20g] 세화다락 밀크티키트",
+            "brand":"",
+            "percent":407,
+            "choice":true,
+            "new":true
+        },
+
+        {
+            "id":4,
+            "imgSrc":"/images/대기업제품.jpg",
+            "title":"대기업제품의 1/5가격에 성능은 그대로!",
+            "brand":"",
+            "percent":658,
+            "choice":true,
+            "new":true
+        },
+
+        {
+            "id":5,
+            "imgSrc":"/images/월간커피.jpg",
+            "title":"월간커피, 초코 케이크 같은 콜드브루 커피",
+            "brand":"",
+            "percent":780,
+            "choice":true,
+            "new":true
+        },
+        
+        {
+            "id":6,
+            "imgSrc":"/images/밥솥.jpg",
+            "title":"세상에서 가장 쉽게 가벼워지는 [저당밥솥]",
+            "brand":"",
+            "percent":1074,
+            "choice":true,
+            "new":true
+        },
+        
+        {
+            "id":7,
+            "imgSrc":"/images/옷옷.png",
+            "title":"신:서울 여름나기| 셔츠와 원피스, 반바지",
+            "brand":"",
+            "percent":1456,
+            "choice":true,
+            "new":true
+        },
+
+        {
+            "id":8,
+            "imgSrc":"/images/하루과일.png",
+            "title":"[한통에 담은 달콤함] 더하루과일바스켓",
+            "brand":"",
+            "percent":244,
+            "choice":true,
+            "new":true
+        },
+
+        {
+            "id":9,
+            "imgSrc":"/images/연필꽃이.png",
+            "title":"[최초공개] 딱따구리의 숲 연필꽂이",
+            "brand":"",
+            "percent":3442,
+            "choice":true,
+            "new":true
+        },
+
+        {
+            "id":10,
+            "imgSrc":"/images/웹툰배경.png",
+            "title":"화려한 원고를 위한 웹툰용 배경 200종",
+            "brand":"",
+            "percent":3874,
+            "choice":true,
+            "new":true
+        },
+
+        {
+            "id":10,
+            "imgSrc":"/images/멀티충전기.png",
+            "title":"노트북2대도거뜬! 초고출력210W멀티충전기",
+            "brand":"",
+            "percent":4279,
+            "choice":true,
+            "new":true
+        }
+    
+    ]
+}
