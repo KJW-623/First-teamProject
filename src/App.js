@@ -11,9 +11,10 @@ import PaymentPage from "./payment/PaymentPage";
 import Community from "./community/Community";
 import ProjectForm from "./create/ProjectForm";
 import Header from "./header/Header";
+import Navbar from "./navbar/Navbar";
 
 function App() {
-    const [loading, setLoading] = useState(true);
+    const [ loading, setLoading ] = useState(true);
 
     useEffect(() => {
         const timer = setTimeout(() => setLoading(false), 2000);
@@ -25,6 +26,7 @@ function App() {
     return (
         <Router>
             <Header />
+            <Navbar />
             <Routes>
                 <Route path="/" element={<Navigate to="/login" replace />} />
                 <Route path="/login" element={<Login />} />

@@ -1,6 +1,7 @@
 import './srhPW.css'
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
+import mintLogo from "../../images/민트 로고.png";
 
 function SrhPW() {
     const [id, setId] = useState("");
@@ -21,9 +22,13 @@ function SrhPW() {
     };
 
     return (
-        <div>
-            <h1 className="title">FundFlow</h1>
+        <div className="srh-pw-outer">
             <div className="srh-pw-container">
+                <img
+                    src={mintLogo}
+                    alt="FundFlow Logo"
+                    className="mintLogo"
+                />
                 <h2>비밀번호 찾기</h2>
                 <h4 style={{opacity:'0.35', textAlign:'left'}}>
                     가입한 아이디(이메일)를 입력하면 비밀번호를 확인할 수 있습니다.<br/>

@@ -2,6 +2,8 @@ import React from "react";
 import "./Login.css";
 import { Link, Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import whiteLogo from "../../images/화이트 로고.png";
+
 
 function Login() {
 
@@ -31,8 +33,15 @@ function Login() {
     return (
         <div style={{ position: "relative", minHeight: "100vh" }}>
             <div className="auth-bg"></div>
+            <div className="Navbar">
+                            <img
+                                src={whiteLogo}
+                                alt="FundFlow Logo"
+                                className="navbar-logo"
+                            />
+                            <h1 className="fundflow-title">FundFlow</h1>
+                        </div>
             <div className="Container">
-                <h1 className="fundflow-title">FundFlow</h1>
                 <h3>간편하게 로그인해보세요</h3>
                 <form onSubmit={handleSubmit}>
                     <div className="inputEmail">
