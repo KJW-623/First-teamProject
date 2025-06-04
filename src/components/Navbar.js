@@ -18,14 +18,16 @@ const menuList2= [ "전체", "디자인 문구", "푸드", "영화ㆍ비디오",
                 <div className="head">
                     <div className="logo"> 
                         <a href="#">
-                        <img width={110} src={whiteLogo}/>
+                        <img width={110} src={whiteLogo} alt="로고"/>
                         </a>
                     </div>
                     <div className="login-botton">
-                        <div className="project"><a href="" >프로젝트 올리기</a></div>
+                        <div className="project">
+                            <a href="#" >프로젝트 올리기</a>
+                        </div>
                         <div className="login">
                             <FontAwesomeIcon icon={faUser} /> 
-                            <a href="">로그인/회원가입</a>
+                            <a href="#">로그인/회원가입</a>
                         </div>                
                     </div>
                 </div>
@@ -34,43 +36,45 @@ const menuList2= [ "전체", "디자인 문구", "푸드", "영화ㆍ비디오",
                 <div className="head-category" >
                     <div className="nav-category">
                         <ul className="menu-list">
-                            <li
-                            onClick={()=>
-                                setIsCateOpen(!isCateOpen)}
-                                style={{ cursor: "pointer" }}
-                            >
-                            <FontAwesomeIcon icon={faBars} />
+                            <li onClick={() => setIsCateOpen(!isCateOpen)} style={{ cursor: "pointer" }}>
+                                <FontAwesomeIcon icon={faBars} />
                             </li>
 
-                            {menuList.map((menu, index)=>{                        
+                            {menuList.map((menu, index)=>(                    
                                 <li key={index}>{menu}</li>
-                            })}
+                            ))}
                         </ul>
                     </div>  
 
-                    <div>
+                    <div className="search-section">
                     <FontAwesomeIcon icon={faSearch}/>
-                    <input size= "20" className="mainsearch" type="text" placeholder="검색어를 입력해주세요.">
-                    </input>
-                    
+                    <input
+                        size= "20"
+                        className="mainsearch"
+                        type="text"
+                        placeholder="검색어를 입력해주세요."
+                        />
                     </div>
                 </div>
-                    {isCateOpen && (
-                        <div className="cate-dropdown">
-                            <ul>
-                                {menuList2.map((menu2, index)=>(
-                                    <li key={index}>{menu2}</li>
-                                ))}
-                            </ul>
-                            </div>
-                    )}
+
+                { /*드롭다운 카테고리*/}
+                {isCateOpen && (
+                    <div className="cate-dropdown">
+                        <ul>
+                            {menuList2.map((menu2, index) => (
+                                <li key={index}>{menu2}</li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
+                </div>
 
         
         
 
         
 
-        </div>
+
         
         </>
     )
