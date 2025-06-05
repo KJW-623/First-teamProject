@@ -5,6 +5,11 @@ import FoundID from "./search-ID&PW/searchID/srhID";
 import FoundPW from "./search-ID&PW/searchPW/srhPW";
 import React, { useState, useEffect } from "react";
 import PageLoading from "./pageLoading/PL";
+import logo from './logo.svg';
+import './App.css';
+import ProductAll from './components/ProductAll';
+import Navbar from './components/Navbar';
+import Details from './components/Details';
 
 function App() {
     const [loading, setLoading] = useState(true);
@@ -18,7 +23,7 @@ function App() {
 
     return (
         <Router>
-            {/* <Navbar /> */}
+            <Navbar/>
             <Routes>
                 <Route path="/" element={<Navigate to="/login" replace />} />
                 <Route path="/login" element={<Login />} />
