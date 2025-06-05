@@ -17,30 +17,9 @@ function ContactForm({ onSubmit }) {
 
     return (
         <form onSubmit={handleSubmit} className="contact-form">
-            <input
-                type="text"
-                name="name"
-                placeholder="이름"
-                value={formData.name}
-                onChange={handleChange}
-                required
-            />
-            <input
-                type="email"
-                name="email"
-                placeholder="이메일"
-                value={formData.email}
-                onChange={handleChange}
-                required
-            />
-            <textarea
-                name="message"
-                placeholder="문의 내용을 입력하세요"
-                value={formData.message}
-                onChange={handleChange}
-                rows="5"
-                required
-            ></textarea>
+            <input type="text" name="name" placeholder="이름" value={formData.name} onChange={handleChange} required />
+            <input type="email" name="email" placeholder="이메일" value={formData.email} onChange={handleChange} required />
+            <textarea name="message" placeholder="문의 내용을 입력하세요" value={formData.message} onChange={handleChange} rows="5" required ></textarea>
             <button type="submit">문의 제출</button>
         </form>
     );

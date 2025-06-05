@@ -39,20 +39,15 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.faq-item.open .faq-question span {
-    transform: rotate(180deg);
-    color: #20e9a5;
-}
-
 .faq-answer {
     padding: 15px 25px;
-    background-color: #fdfdfd;
+    background-color: #f4f4f4;
     border-top: 1px solid #f0f0f0;
 }
 
 .faq-answer p {
     margin: 0;
     font-size: 15px;
-    color: #666;
+    color: #4c4c4c;
     line-height: 1.6;
 }

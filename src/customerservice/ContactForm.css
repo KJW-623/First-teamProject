@@ -6,7 +6,7 @@
     margin: 0 auto;
     padding: 20px;
     border-radius: 8px;
-    background-color: #fcfcfc;
+    background-color: #f1f1f1;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
 }
 
@@ -23,7 +23,7 @@
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: #FF5722;
+    border-color: #20e9a5 ;
     box-shadow: 0 0 0 3px rgba(255, 87, 34, 0.1);
 }
 
