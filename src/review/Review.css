@@ -1,0 +1,229 @@
+
+
+.review-page-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f0f2f5;
+    border-radius: 10px;
+}
+
+.page-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.creator-profile-header {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.profile-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.profile-text .profile-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    display: block;
+}
+
+.profile-text .profile-level,
+.profile-text .profile-followers {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 5px;
+    display: block;
+}
+
+.profile-tabs {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 15px;
+}
+
+.profile-tabs a {
+    text-decoration: none;
+    color: #555;
+    padding: 10px 15px;
+    margin: 0 5px;
+    font-weight: bold;
+    border-bottom: 3px solid transparent;
+    transition: color 0.2s ease, border-bottom-color 0.2s ease;
+}
+
+.profile-tabs a:hover {
+    color: #20e9a5;
+}
+
+.profile-tabs a.active {
+    color: #20e9a5;
+    border-bottom-color: #20e9a5;
+}
+
+.review-filters {
+    background-color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filter-group label {
+    font-size: 0.9em;
+    color: #555;
+    font-weight: bold;
+}
+
+.filter-group select,
+.filter-group input[type="checkbox"] {
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9em;
+    outline: none;
+    cursor: pointer;
+}
+
+.filter-group select:focus,
+.filter-group input[type="checkbox"]:focus {
+    border-color: #20e9a5;
+    box-shadow: 0 0 0 2px rgba(32, 233, 165, 0.2);
+}
+
+.checkbox-group {
+    margin-left: auto;
+}
+
+.review-list {
+    display: grid;
+    gap: 20px;
+}
+
+.no-reviews {
+    text-align: center;
+    padding: 50px;
+    color: #777;
+    font-size: 1.2em;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+.review-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.reviewer-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 12px;
+}
+
+.reviewer-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.reviewer-name {
+    font-weight: bold;
+    color: #333;
+    font-size: 1em;
+}
+
+.review-date {
+    font-size: 0.8em;
+    color: #888;
+}
+
+.review-rating {
+    display: flex;
+    gap: 2px;
+}
+
+.review-rating .star {
+    color: #ccc;
+    font-size: 1.2em;
+}
+
+.review-rating .star.filled {
+    color: #20e9a5;
+}
+
+.review-content p {
+    font-size: 0.95em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.review-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.review-images img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+@media (max-width: 768px) {
+    .review-filters {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .checkbox-group {
+        margin-left: 0;
+    }
+}
