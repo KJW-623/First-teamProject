@@ -4,7 +4,8 @@ import './Header.css';
 const Header = () => {
 
     const location = useLocation();
-    const shouldHideHeader = location.pathname === '/login' || location.pathname === '/HelpCenter';
+    const shouldHideHeader = location.pathname === '/login' || location.pathname === '/HelpCenter' || location.pathname === '/Register'
+                                || location.pathname === '/FoundID' || location.pathname === '/FoundPW';
 
     if (shouldHideHeader) {
         return null;
@@ -16,12 +17,15 @@ const Header = () => {
                     <Link to="/"><img className="logo" src="../image/mintLogo.png" alt="Mint Logo" /></Link>
                 </div>
                 <div className="header-actions">
-                    <Link to="/project-manage" className="action-link">프로젝트 생성</Link>
-                    <button className="icon-button heart-icon">
-                        <i className="fas fa-heart">❤️</i>
+                    <Link to="/ProjectCreate" className="action-link">프로젝트 생성</Link>
+                    <button className="icon-button">
+                        <Link to="/WishList" className="action-link">❤️</Link>
                     </button>
-                    <button className="icon-button notification-icon">
-                        <i className="fas fa-bell">🔔</i>
+                    <button className="icon-button">
+                        <Link to="/Alarm" className="action-link">🔔</Link>
+                    </button>
+                    <button className="icon-button">
+                        <Link to="/Community" className="action-link">💬</Link>
                     </button>
                     <div className="profile-dropdown">
                         <button className="profile-button">
@@ -31,6 +35,7 @@ const Header = () => {
                                     alt="프로필 사진"
                                     className="profile-image"
                                 />
+                                {/*마이페이지 링크 연결하기 */}
                             </div>FundFlow
                         </button>
                     </div>
@@ -41,19 +46,19 @@ const Header = () => {
                 <ul className="nav-links">
                     <li>
                         <button className="category-button">
-                            <i className="fas fa-bars"></i>
+                            <i className="fas"></i>
                             카테고리
                         </button>
                     </li>
                     <li><Link to="/popular">인기</Link></li>
                     <li><Link to="/new">신규</Link></li>
-                    <li><Link to="/ending-soon">공개예정</Link></li>
+                    <li><Link to="/open-soon">공개예정</Link></li>
                     <li><Link to="/editors-choice">에디터의 추천</Link></li>
                 </ul>
                 <div className="search-bar">
                     <input type="text" placeholder="검색어를 입력해주세요." />
                     <button className="search-button">
-                        <i className="fas fa-search">검색</i>
+                        <i className="fas">검색</i>
                     </button>
                 </div>
             </nav>

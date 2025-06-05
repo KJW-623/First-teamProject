@@ -1,11 +1,11 @@
 body {
     margin: 0;
     font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', 'Dotum', sans-serif;
-    color: #333;
+    color: black;
 }
 
 .main-header {
-    background-color: #fff;
+    background-color: white;
     border-bottom: 1px solid #e0e0e0;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     padding: 10px 20px;
@@ -15,18 +15,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
-    padding-bottom: 10px;
-}
-
-.header-logo a {
-    font-family: 'Georgia', serif;
-    font-size: 2.2em;
-    font-weight: bold;
-    color: black;
-    text-decoration: none;
-    line-height: 1;
 }
 
 .header-actions {
@@ -59,8 +49,7 @@ body {
 }
 
 .icon-button:hover {
-    background-color: #f0f0f0;
-    color: #20e9a5;
+    background-color: white;
 }
 
 .upload-icon-button {
@@ -111,7 +100,7 @@ body {
 .header-nav {
     display: flex;
     align-items: center;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     padding-top: 10px;
     justify-content: flex-end;
@@ -136,7 +125,6 @@ body {
     padding: 5px 0;
     display: flex;
     align-items: center;
-    gap: 5px;
     background: none;
     border: none;
     cursor: pointer;
@@ -189,6 +177,5 @@ body {
 }
 
 .fas {
-    font-size: 0.9em;
     font-style: normal;
 }

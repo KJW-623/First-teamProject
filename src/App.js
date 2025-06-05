@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Login from "./login-register/login/Login";
 import Register from "./login-register/register/Register";
 import FoundID from "./search-ID&PW/searchID/srhID";
@@ -8,10 +8,13 @@ import PageLoading from "./pageLoading/PL";
 import InfoBanner from "./informationBanner/infoBanner";
 import HelpCenterPage from "./customerservice/HelpCenterPage";
 import PaymentPage from "./payment/PaymentPage";
-import Community from "./community/Community";
+import CommunityLayout from './community/CommunityLayout';
 import ProjectForm from "./create/ProjectForm";
 import Header from "./header/Header";
-import Navbar from "./navbar/Navbar";
+import ReviewPage from "./review/ReviewPage";
+import Heart from "./skill/heart/Heart";
+import Alarm from "./skill/alarm/Alarm";
+//import Navbar from "./navbar/Navbar";
 
 function App() {
     const [ loading, setLoading ] = useState(true);
@@ -26,7 +29,8 @@ function App() {
     return (
         <Router>
             <Header />
-            <Navbar />
+            {/* <Navbar /> */}
+
             <Routes>
                 <Route path="/" element={<Navigate to="/login" replace />} />
                 <Route path="/login" element={<Login />} />
@@ -36,8 +40,12 @@ function App() {
                 <Route path="/HelpCenter" element={<HelpCenterPage />} />
                 <Route path="/ProjectCreate" element={<ProjectForm />} />
                 <Route path="/Payment" element={<PaymentPage />} />
-                <Route path="/creator-community" element={<Community />} />
+                <Route path="/Community" element={<CommunityLayout />} />
+                <Route path="/Review" element={<ReviewPage />} />
+                <Route path="/WishList" element={<Heart />} />
+                <Route path="/Alarm" element={<Alarm />} />
             </Routes>
+
             <InfoBanner />
         </Router>
     );
