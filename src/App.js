@@ -8,7 +8,7 @@ import PageLoading from "./pageLoading/PL";
 import InfoBanner from "./informationBanner/infoBanner";
 import HelpCenterPage from "./customerservice/HelpCenterPage";
 import PaymentPage from "./payment/PaymentPage";
-import CommunityLayout from './community/CommunityLayout';
+import CommunityLayout from './skill/community/CommunityLayout';
 import ProjectForm from "./create/ProjectForm";
 import Header from "./header/Header";
 import ReviewPage from "./review/ReviewPage";
