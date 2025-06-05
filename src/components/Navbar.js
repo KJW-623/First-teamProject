@@ -55,7 +55,7 @@ const menuList2= [ "전체", "디자인 문구", "푸드", "영화ㆍ비디오",
                         placeholder="검색어를 입력해주세요."
                         />
                     </div>
-                </div>
+                </div> 
 
                 { /*드롭다운 카테고리*/}
                 {isCateOpen && (
