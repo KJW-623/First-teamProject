@@ -5,10 +5,9 @@ import FoundID from "./search-ID&PW/searchID/srhID";
 import FoundPW from "./search-ID&PW/searchPW/srhPW";
 import React, { useState, useEffect } from "react";
 import PageLoading from "./pageLoading/PL";
-import Navbar from "./navbar/Navbar";
 
 function App() {
-    const [ loading, setLoading ] = useState(true);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const timer = setTimeout(() => setLoading(false), 2000);
@@ -26,7 +25,12 @@ function App() {
                 <Route path="/register" element={<Register />} />
                 <Route path="/FoundID" element={<FoundID />} />
                 <Route path="/FoundPW" element={<FoundPW />} />
+                <Route path="/customer-service" element={<CustomerService />} />
+                <Route path="/project-create" element={<Create />} />
+                <Route path="/project-payment" element={<Payment />} />
+                <Route path="/creator-community" element={<Community />} />
             </Routes>
+            <InfoBanner />
         </Router>
     );
 }
