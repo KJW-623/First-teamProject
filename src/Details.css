@@ -1,0 +1,136 @@
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fdfdfd;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.image-section {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.main-image {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnails {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;    
+  justify-content: center;
+}
+
+.thumbnail {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  
+}
+
+.info-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.tag {
+  color: crimson;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0 20px;
+}
+
+.funding-info {
+  margin-bottom: 20px;
+}
+
+.amount {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.percentage {
+  font-size: 14px;
+  color: crimson;
+}
+
+.progress-bar {
+  background-color: #eee;
+  height: 10px;
+  border-radius: 5px;
+  margin-top: 5px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  background-color: crimson;
+  height: 100%;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.detail-item {
+  font-size: 14px;
+}
+
+.detail-label {
+  color: #999;
+}
+
+.detail-value {
+  font-weight: 500;
+}
+
+.support-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.support-btn:hover {
+  background-color: #333;
+}
+
+.likes-comments {
+  text-align: center;
+  font-size: 13px;
+  color: #777;
+  margin-top: 10px;
+}

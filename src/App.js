@@ -1,3 +1,4 @@
+import './App.css';
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Login from "./login-register/login/Login";
 import Register from "./login-register/register/Register";
@@ -14,7 +15,9 @@ import Header from "./header/Header";
 import ReviewPage from "./review/ReviewPage";
 import Heart from "./skill/heart/Heart";
 import Alarm from "./skill/alarm/Alarm";
-//import Navbar from "./navbar/Navbar";
+import Navbar from "./components/Navbar";
+//import ProductAll from './components/ProductAll'; // 가져온 ProductAll
+//import Details from './components/Details'; // 가져온 Details
 
 function App() {
     const [ loading, setLoading ] = useState(true);
@@ -29,7 +32,7 @@ function App() {
     return (
         <Router>
             <Header />
-            {/* <Navbar /> */}
+            <Navbar />
 
             <Routes>
                 <Route path="/" element={<Navigate to="/login" replace />} />
@@ -44,6 +47,9 @@ function App() {
                 <Route path="/Review" element={<ReviewPage />} />
                 <Route path="/WishList" element={<Heart />} />
                 <Route path="/Alarm" element={<Alarm />} />
+                {/* 추가된 라우트를 여기에 추가 */}
+                {/* <Route path="/products" element={<ProductAll />} /> */}
+                {/* <Route path="/details" element={<Details />} /> */}
             </Routes>
 
             <InfoBanner />
