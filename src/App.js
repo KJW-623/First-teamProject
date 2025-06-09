@@ -16,6 +16,7 @@ import ReviewPage from "./review/ReviewPage";
 import Heart from "./skill/heart/Heart";
 import Alarm from "./skill/alarm/Alarm";
 import Navbar from "./components/Navbar";
+import Mypage from './components/Mypage';
 //import ProductAll from './components/ProductAll'; // 가져온 ProductAll
 //import Details from './components/Details'; // 가져온 Details
 
@@ -32,7 +33,7 @@ function App() {
     return (
         <Router>
             <Header />
-            <Navbar />
+            {/* <Navbar /> */}
 
             <Routes>
                 <Route path="/" element={<Navigate to="/login" replace />} />
@@ -47,6 +48,7 @@ function App() {
                 <Route path="/Review" element={<ReviewPage />} />
                 <Route path="/WishList" element={<Heart />} />
                 <Route path="/Alarm" element={<Alarm />} />
+                <Route path="/MyPage" element={<Mypage />} />
                 {/* 추가된 라우트를 여기에 추가 */}
                 {/* <Route path="/products" element={<ProductAll />} /> */}
                 {/* <Route path="/details" element={<Details />} /> */}

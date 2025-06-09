@@ -4,7 +4,7 @@ import './Header.css';
 const Header = () => {
 
     const location = useLocation();
-    const shouldHideHeader = location.pathname === '/login' || location.pathname === '/HelpCenter' || location.pathname === '/Register'
+    const shouldHideHeader = location.pathname === '/login' || location.pathname === '/HelpCenter' || location.pathname === '/register'
                                 || location.pathname === '/FoundID' || location.pathname === '/FoundPW';
 
     if (shouldHideHeader) {
@@ -28,6 +28,7 @@ const Header = () => {
                         <Link to="/Community" className="action-link">💬</Link>
                     </button>
                     <div className="profile-dropdown">
+                        <Link to="/MyPage" className="action-link">
                         <button className="profile-button">
                             <div className="profile-image-container">
                                 <img
@@ -37,7 +38,7 @@ const Header = () => {
                                 />
                                 {/*마이페이지 링크 연결하기 */}
                             </div>FundFlow
-                        </button>
+                        </button></Link>
                     </div>
                 </div>
             </div>
