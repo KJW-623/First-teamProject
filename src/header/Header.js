@@ -36,7 +36,6 @@ const Header = () => {
                                     alt="프로필 사진"
                                     className="profile-image"
                                 />
-                                {/*마이페이지 링크 연결하기 */}
                             </div>FundFlow
                         </button></Link>
                     </div>
