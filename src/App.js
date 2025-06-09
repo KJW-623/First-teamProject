@@ -3,15 +3,22 @@ import './App.css';
 import ProductAll from './components/ProductAll';
 import Navbar from './components/Navbar';
 import Details from './components/Details';
+import Mypage from './components/Mypage';
+import React from "react";
+import { RouterProvider } from "react-router-dom";
+import router from "./Error/router";
 
 function App() {
-  return (
+  return <RouterProvider router={router} />;
+
+
 //<ProductAll/>
-<Navbar/>
+//<Navbar/>
 //<Details/>
+//<Mypage/>
+}
 
-
-
+export default App;
 
 
     // <div className="App">
@@ -30,7 +37,4 @@ function App() {
     //     </a>
     //   </header>
     // </div>
-  );
-}
-
-export default App;
+  
