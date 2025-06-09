@@ -1,30 +1,44 @@
 .page-loading-overlay {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(255,255,255,0.85);
+    background: linear-gradient(135deg, #e0fff6 0%, #c1eaff 100%);
     z-index: 9999;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: 'Segoe UI', 'Pretendard', 'Arial', sans-serif;
 }
 
 .page-loading-spinner {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     border: 8px solid #e0e0e0;
-    border-top: 8px solid rgb(32, 233, 166);
+    border-top: 8px solid #20e9a6;
+    border-right: 8px solid #20e9a6;
     border-radius: 50%;
-    animation: spin 1s linear infinite;
-    margin-bottom: 20px;
+    animation: spin 0.8s cubic-bezier(.68,-0.55,.27,1.55) infinite;
+    margin-bottom: 28px;
+    box-shadow: 0 0 32px 0 #20e9a633, 0 8px 32px 0 #20e9a622;
+    background: rgba(255,255,255,0.7);
 }
 
 @keyframes spin {
-    to { transform: rotate(360deg); }
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
 }
 
 .page-loading-text {
-    font-size: 1.3rem;
-    color: rgb(32, 233, 166);
-    font-weight: bold;
+    font-size: 1.5rem;
+    color: #20e9a6;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-shadow: 0 2px 8px #20e9a622;
+    margin-top: 8px;
+    animation: fadeIn 1.2s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px);}
+    to { opacity: 1; transform: translateY(0);}
 }
