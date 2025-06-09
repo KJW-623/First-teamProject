@@ -6,9 +6,6 @@ import FoundID from "./search-ID&PW/searchID/srhID";
 import FoundPW from "./search-ID&PW/searchPW/srhPW";
 import { useState, useEffect } from "react";
 import PageLoading from "./pageLoading/PL";
-<<<<<<< HEAD
-//import Navbar from "./navbar/Navbar";
-=======
 import InfoBanner from "./informationBanner/infoBanner";
 import HelpCenterPage from "./customerservice/HelpCenterPage";
 import PaymentPage from "./payment/PaymentPage";
@@ -23,7 +20,6 @@ import Mypage from './components/Mypage';
 import ProductAll from './components/ProductAll';
 //import ProductAll from './components/ProductAll'; // 가져온 ProductAll
 //import Details from './components/Details'; // 가져온 Details
->>>>>>> ft-customer
 
 function App() {
     const [ loading, setLoading ] = useState(true);
