@@ -43,6 +43,7 @@ function Login() {
                         </div>
             <div className="Container">
                 <h3>간편하게 로그인해보세요</h3>
+                <br></br>
                 <form onSubmit={handleSubmit}>
                     <div className="inputEmail">
                         <label htmlFor="email">이메일:</label>

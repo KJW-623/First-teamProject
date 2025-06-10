@@ -50,8 +50,8 @@ const Header = () => {
                             카테고리
                         </button>
                     </li>
+                    <li><Link to="/home">홈</Link></li>
                     <li><Link to="/popular">인기</Link></li>
-                    <li><Link to="/new">신규</Link></li>
                     <li><Link to="/open-soon">공개예정</Link></li>
                     <li><Link to="/RecommandProjects">에디터의 추천</Link></li>
                 </ul>

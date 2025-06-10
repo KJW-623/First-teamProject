@@ -15,7 +15,7 @@ function Mypage() {
     // 더미 유저 데이터
     const user = {
         name: "FundFlow",
-        profileImg: "./images/민트 로고.png",
+        profileImg: "https://cdn.pixabay.com/photo/2022/07/18/19/57/dog-7330712_640.jpg",
     };
 
     // 카테고리별 콘텐츠 정의
@@ -45,7 +45,6 @@ function Mypage() {
                         <div className="profile-shot">
                             <img
                                 src={user.profileImg || "/default-profile.png"}
-                                alt=""
                                 width={120}
                             />
                         </div>

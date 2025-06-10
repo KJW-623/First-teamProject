@@ -10,10 +10,6 @@ function Header() {
                 <span className="separator"></span>
                 <span className="help-center-title">헬프센터</span>
             </div>
-            <div className="header-right">
-                <a href="#" className="header-link">헬프센터 둘러보기</a>
-                <a href="#" className="header-link primary-button">문의하기</a>
-            </div>
         </header>
     );
 }

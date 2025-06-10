@@ -64,13 +64,12 @@ a:focus {
 }
 
 .profile-shot img {
-    border-radius: 50%;
+    border-radius: 90%;
     border: 1px solid #ccc;
     width: 150px;
     max-width: 100%;
     height: auto;
     object-fit: scale-down;
-    border-radius: 50%;
 }
 
 

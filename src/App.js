@@ -21,7 +21,8 @@ import Details from './components/Details';
 import ProductAll from './components/ProductAll';
 import Prelaunching from './prelaunchingPage/Prelaunching';
 import RecommandProjects from './recommandProject/Recopro'
-import router from "./Error/router";
+// import router from "./Error/router";
+// import ErrorPage from './Error/ErrorPage';
 
 function App() {
     const [loading, setLoading] = useState(true);
@@ -35,7 +36,7 @@ function App() {
 
     return (
         <Router>
-            <RouterProvider router={router} />
+            {/* <RouterProvider router={router} /> */}
             <Header />
             {/* <Navbar /> */}
             <Routes>
@@ -52,12 +53,12 @@ function App() {
                 <Route path="/Like" element={<HeartPage />} />
                 <Route path="/Notification" element={<NotificationPage />} />
                 <Route path="/MyPage" element={<Mypage />} />
-                <Route path="/products" element={<ProductAll />} />
+                <Route path="/popular" element={<ProductAll />} />
                 <Route path="/details" element={<Details />} />
                 <Route path="/open-soon" element={<Prelaunching />} />
                 <Route path="/RecommandProjects" element={<RecommandProjects />} />
+                {/* <Route path="/Error" element={<ErrorPage />} /> */}
             </Routes>
-
             <InfoBanner />
         </Router>
     )
