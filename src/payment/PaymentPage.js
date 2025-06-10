@@ -250,7 +250,7 @@ const PaymentPage = ({ product }) => {
                         </li>
                         <li>
                             <input type="checkbox" id="term2" checked={agreedToTerms} onChange={handleTermsChange} disabled />
-                            <label htmlFor="term2">텀블벅은 플랫폼의 특성상 프로젝트의 진척이 늦어지거나 중단될 수 있으며, 배송은 예정보다 지연될 수 있음을 고지합니다.</label>
+                            <label htmlFor="term2">펀드플로우는 플랫폼의 특성상 프로젝트의 진척이 늦어지거나 중단될 수 있으며, 배송은 예정보다 지연될 수 있음을 고지합니다.</label>
                             <span className="view-details">자세히 보기</span>
                         </li>
                         <li>
