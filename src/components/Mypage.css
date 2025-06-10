@@ -140,8 +140,8 @@ a:focus {
 
 .profile-edit-button button {
     background-color: white;
-    color: #ff6b6b;
-    border: 1px solid #ff6b6b;
+    color: #20e9a5 ;
+    border: 1px solid #20e9a5 ;
     padding: 10px 35px;
     border-radius: 5px;
     cursor: pointer;
@@ -150,7 +150,7 @@ a:focus {
 }
 
 .profile-edit-button button:hover {
-    background-color: #ff6b6b;
+    background-color: #20e9a5 ;
     color: white;
 }
 

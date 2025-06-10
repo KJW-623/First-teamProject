@@ -19,10 +19,10 @@ const Header = () => {
                 <div className="header-actions">
                     <Link to="/ProjectCreate" className="action-link">프로젝트 생성</Link>
                     <button className="icon-button">
-                        <Link to="/WishList" className="action-link">❤️</Link>
+                        <Link to="/Like" className="action-link">❤️</Link>
                     </button>
                     <button className="icon-button">
-                        <Link to="/Alarm" className="action-link">🔔</Link>
+                        <Link to="/Notification" className="action-link">🔔</Link>
                     </button>
                     <button className="icon-button">
                         <Link to="/Community" className="action-link">💬</Link>
