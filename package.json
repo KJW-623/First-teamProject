@@ -12,12 +12,19 @@
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.3.6",
+<<<<<<< HEAD
     "json-server": "^1.0.0-beta.3",
+=======
+>>>>>>> af2258f675a3002a371f6030c598500b032e35c0
     "react": "^19.1.0",
     "react-bootstrap": "^2.10.10",
     "react-dom": "^19.1.0",
     "react-icons": "^5.5.0",
     "react-router-dom": "^7.6.1",
+<<<<<<< HEAD
+=======
+    "json-server": "^1.0.0-beta.3",
+>>>>>>> af2258f675a3002a371f6030c598500b032e35c0
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },

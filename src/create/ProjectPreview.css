@@ -1,0 +1,59 @@
+.project-preview-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.preview-image-wrapper {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.preview-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.preview-content {
+    padding: 20px;
+}
+
+.preview-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.preview-category,
+.preview-amount {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.preview-description {
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.preview-description h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.preview-description p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+    white-space: pre-wrap;
+}

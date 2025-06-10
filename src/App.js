@@ -1,49 +1,28 @@
-import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import './App.css';
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Login from "./login-register/login/Login";
 import Register from "./login-register/register/Register";
 import FoundID from "./search-ID&PW/searchID/srhID";
 import FoundPW from "./search-ID&PW/searchPW/srhPW";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import PageLoading from "./pageLoading/PL";
-import logo from './logo.svg';
-import './App.css';
+import InfoBanner from "./informationBanner/infoBanner";
+import HelpCenterPage from "./customerservice/HelpCenterPage";
+import PaymentPage from "./payment/PaymentPage";
+import CommunityLayout from './skill/community/CommunityLayout';
+import ProjectForm from "./create/ProjectForm";
+import Header from "./header/Header";
+import ReviewPage from "./review/ReviewPage";
+import Heart from "./skill/heart/Heart";
+import Alarm from "./skill/alarm/Alarm";
+import Navbar from "./components/Navbar";
+import Mypage from './components/Mypage';
 import ProductAll from './components/ProductAll';
-import Navbar from './components/Navbar';
-import Details from './components/Details';
-import CustomerService from './customerservice/CustomerService';
-import Create from './create/Create';
-import Payment from './payment/Payment';
-import Community from './community/Community';
-import InfoBanner from './informationBanner/infoBanner';
-import Prelaunching from './prelaunchingPage/Prelaunching';
-
-function AppContent() {
-    const location = useLocation();
-    const hideNavbarPaths = ["/login", "/register", "/FoundID", "/FoundPW"];
-    const hideNavbar = hideNavbarPaths.includes(location.pathname);
-
-    return (
-        <>
-            {!hideNavbar && <Navbar />}
-            <Routes>
-                <Route path="/" element={<ProductAll />} />
-                <Route path="/prelaunching" element={<Prelaunching />} /> {/* 추가 */}
-                <Route path="/login" element={<Login />} />
-                <Route path="/register" element={<Register />} />
-                <Route path="/FoundID" element={<FoundID />} />
-                <Route path="/FoundPW" element={<FoundPW />} />
-                <Route path="/customer-service" element={<CustomerService />} />
-                <Route path="/project-create" element={<Create />} />
-                <Route path="/project-payment" element={<Payment />} />
-                <Route path="/creator-community" element={<Community />} />
-            </Routes>
-            {!hideNavbar && <InfoBanner />}
-        </>
-    );
-}
+//import ProductAll from './components/ProductAll'; // 가져온 ProductAll
+//import Details from './components/Details'; // 가져온 Details
 
 function App() {
-    const [loading, setLoading] = useState(true);
+    const [ loading, setLoading ] = useState(true);
 
     useEffect(() => {
         const timer = setTimeout(() => setLoading(false), 2000);
@@ -54,7 +33,30 @@ function App() {
 
     return (
         <Router>
-            <AppContent />
+            <Header />
+            {/* <Navbar /> */}
+
+            <Routes>
+                <Route path="/" element={<Navigate to="/login" replace />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="/FoundID" element={<FoundID />} />
+                <Route path="/FoundPW" element={<FoundPW />} />
+                <Route path="/HelpCenter" element={<HelpCenterPage />} />
+                <Route path="/ProjectCreate" element={<ProjectForm />} />
+                <Route path="/Payment" element={<PaymentPage />} />
+                <Route path="/Community" element={<CommunityLayout />} />
+                <Route path="/Review" element={<ReviewPage />} />
+                <Route path="/WishList" element={<Heart />} />
+                <Route path="/Alarm" element={<Alarm />} />
+                <Route path="/MyPage" element={<Mypage />} />
+                {/* <Route path="/AllProduct" element={<ProductAll />} /> */}
+                {/* 추가된 라우트를 여기에 추가 */}
+                {/* <Route path="/products" element={<ProductAll />} /> */}
+                {/* <Route path="/details" element={<Details />} /> */}
+            </Routes>
+
+            <InfoBanner />
         </Router>
     );
 }
