@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
 import {Container, Row, Col} from "react-bootstrap";
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 

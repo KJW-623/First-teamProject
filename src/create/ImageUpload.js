@@ -37,7 +37,7 @@ function ImageUpload({ onImageChange, currentImage }) {
             />
             {previewUrl ? (
                 <div className="image-preview">
-                    <img src={previewUrl} alt="미리보기" />
+                    <img src={previewUrl} />
                 </div>
             ) : (
                 <div className="no-image-preview">

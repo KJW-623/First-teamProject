@@ -13,13 +13,12 @@ import CommunityLayout from './skill/community/CommunityLayout';
 import ProjectForm from "./create/ProjectForm";
 import Header from "./header/Header";
 import ReviewPage from "./review/ReviewPage";
-import Heart from "./skill/heart/Heart";
-import Alarm from "./skill/alarm/Alarm";
-import Navbar from "./components/Navbar";
+//import Navbar from "./components/Navbar";
 import Mypage from './components/Mypage';
 import ProductAll from './components/ProductAll';
-//import ProductAll from './components/ProductAll'; // 가져온 ProductAll
-//import Details from './components/Details'; // 가져온 Details
+import HeartPage from './skill/heart/HeartPage';
+import NotificationPage from './skill/alarm/NotificationPage';
+import Details from './components/Details'; // 가져온 Details
 
 function App() {
     const [ loading, setLoading ] = useState(true);
@@ -47,13 +46,11 @@ function App() {
                 <Route path="/Payment" element={<PaymentPage />} />
                 <Route path="/Community" element={<CommunityLayout />} />
                 <Route path="/Review" element={<ReviewPage />} />
-                <Route path="/WishList" element={<Heart />} />
-                <Route path="/Alarm" element={<Alarm />} />
+                <Route path="/Like" element={<HeartPage />} />
+                <Route path="/Notification" element={<NotificationPage />} />
                 <Route path="/MyPage" element={<Mypage />} />
-                {/* <Route path="/AllProduct" element={<ProductAll />} /> */}
-                {/* 추가된 라우트를 여기에 추가 */}
-                {/* <Route path="/products" element={<ProductAll />} /> */}
-                {/* <Route path="/details" element={<Details />} /> */}
+                <Route path="/products" element={<ProductAll />} />
+                <Route path="/details" element={<Details />} />
             </Routes>
 
             <InfoBanner />
