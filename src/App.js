@@ -1,10 +1,10 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 import Login from "./login-register/login/Login";
 import Register from "./login-register/register/Register";
 import FoundID from "./search-ID&PW/searchID/srhID";
 import FoundPW from "./search-ID&PW/searchPW/srhPW";
-import { useState, useEffect } from "react";
 import PageLoading from "./pageLoading/PL";
 import InfoBanner from "./informationBanner/infoBanner";
 import HelpCenterPage from "./customerservice/HelpCenterPage";
@@ -13,15 +13,16 @@ import CommunityLayout from './skill/community/CommunityLayout';
 import ProjectForm from "./create/ProjectForm";
 import Header from "./header/Header";
 import ReviewPage from "./review/ReviewPage";
-//import Navbar from "./components/Navbar";
 import Mypage from './components/Mypage';
-import ProductAll from './components/ProductAll';
 import HeartPage from './skill/heart/HeartPage';
 import NotificationPage from './skill/alarm/NotificationPage';
-import Details from './components/Details'; // 가져온 Details
+import Details from './components/Details';
+//import Navbar from './components/Navbar';
+import ProductAll from './components/ProductAll';
+import Prelaunching from './prelaunchingPage/Prelaunching';
 
 function App() {
-    const [ loading, setLoading ] = useState(true);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const timer = setTimeout(() => setLoading(false), 2000);
@@ -34,7 +35,6 @@ function App() {
         <Router>
             <Header />
             {/* <Navbar /> */}
-
             <Routes>
                 <Route path="/" element={<Navigate to="/login" replace />} />
                 <Route path="/login" element={<Login />} />
@@ -51,11 +51,12 @@ function App() {
                 <Route path="/MyPage" element={<Mypage />} />
                 <Route path="/products" element={<ProductAll />} />
                 <Route path="/details" element={<Details />} />
+                <Route path="/open-soon" element={<Prelaunching />} />
             </Routes>
 
             <InfoBanner />
         </Router>
-    );
+    )
 }
 
-export default App;
+export default App

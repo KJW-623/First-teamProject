@@ -1,6 +1,6 @@
-import React, {useState} from "react";
-import "../App.css";
+import {useState} from "react";
 import "../Details.css";
+import { Link } from "react-router-dom";
 
 function Details () {
 
@@ -35,12 +35,11 @@ function Details () {
 
         {/* 정보 영역 */}
         <div className="info-section">
-          <span className="tag">펀딩</span>
-          <h1 className="title">신:서울 여름나기 셔츠와 원피스, 반바지</h1>
+          <span className="tag">🎁펀딩</span>
+          <h1 className="title">여름나기 셔츠와 원피스, 반바지</h1>
 
           <div className="funding-info">
-            <p className="amount">₩10,617,000 원</p>
-            <p className="percentage">2123%</p>
+            <DetailItem label="모인 금액" /><span className="amount">10,617,000 원</span><span className="percentage"> 2123%</span>
             <div className="progress-bar">
               <div className="progress-fill" style={{ width: "100%" }}></div>
             </div>
@@ -54,8 +53,9 @@ function Details () {
             <DetailItem label="결제" value="2025.06.17" />
             <DetailItem label="예상 발송 시작일" value="2025.07.07" />
           </div>
-
-          <button className="support-btn">후원하기</button>
+          
+          <Link to="/Payment">
+          <button className="support-btn">후원하기</button></Link>
 
           <div className="likes-comments">❤️ 429 &nbsp; 💬 22</div>
         </div>
