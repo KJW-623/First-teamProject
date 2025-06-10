@@ -20,6 +20,7 @@ import Details from './components/Details';
 //import Navbar from './components/Navbar';
 import ProductAll from './components/ProductAll';
 import Prelaunching from './prelaunchingPage/Prelaunching';
+import RecommandProjects from './recommandProject/Recopro'
 
 function App() {
     const [loading, setLoading] = useState(true);
@@ -52,6 +53,7 @@ function App() {
                 <Route path="/products" element={<ProductAll />} />
                 <Route path="/details" element={<Details />} />
                 <Route path="/open-soon" element={<Prelaunching />} />
+                <Route path="/RecommandProjects" element={<RecommandProjects />} />
             </Routes>
 
             <InfoBanner />

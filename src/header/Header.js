@@ -53,7 +53,7 @@ const Header = () => {
                     <li><Link to="/popular">인기</Link></li>
                     <li><Link to="/new">신규</Link></li>
                     <li><Link to="/open-soon">공개예정</Link></li>
-                    <li><Link to="/editors-choice">에디터의 추천</Link></li>
+                    <li><Link to="/RecommandProjects">에디터의 추천</Link></li>
                 </ul>
                 <div className="search-bar">
                     <input type="text" placeholder="검색어를 입력해주세요." />

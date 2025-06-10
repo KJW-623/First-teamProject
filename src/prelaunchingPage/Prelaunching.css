@@ -1,0 +1,78 @@
+/* 전체 배경 흰색, 중앙정렬 */
+.prelaunching-root {
+    min-height: 100vh;
+    background: #fff;
+    padding: 48px 0 32px 0;
+    box-sizing: border-box;
+    width: 100vw;
+}
+
+.soon-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.soon-desc {
+    color: #555;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.soon-list-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.soon-card {
+    background: #f0f7f4;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(32,233,166,0.08);
+    padding: 18px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 220px;
+}
+
+.soon-thumb {
+    width: 100%;
+    min-width: 120px;
+    height: 140px;
+    background: #d2fbe7;
+    border-radius: 8px;
+    margin-bottom: 14px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.soon-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.soon-info h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.1rem;
+}
+
+.soon-info p {
+    font-size: 0.96rem;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.soon-date {
+    font-size: 0.9rem;
+    color: #20e9a5;
+    font-weight: bold;
+}
