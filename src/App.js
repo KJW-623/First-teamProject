@@ -15,10 +15,10 @@ import Create from './create/Create';
 import Payment from './payment/Payment';
 import Community from './community/Community';
 import InfoBanner from './informationBanner/infoBanner';
+import Prelaunching from './prelaunchingPage/Prelaunching';
 
 function AppContent() {
     const location = useLocation();
-    // Navbar를 숨길 경로 배열
     const hideNavbarPaths = ["/login", "/register", "/FoundID", "/FoundPW"];
     const hideNavbar = hideNavbarPaths.includes(location.pathname);
 
@@ -26,7 +26,8 @@ function AppContent() {
         <>
             {!hideNavbar && <Navbar />}
             <Routes>
-                <Route path="/" element={<Navigate to="/login" replace />} />
+                <Route path="/" element={<ProductAll />} />
+                <Route path="/prelaunching" element={<Prelaunching />} /> {/* 추가 */}
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/FoundID" element={<FoundID />} />
@@ -36,7 +37,7 @@ function AppContent() {
                 <Route path="/project-payment" element={<Payment />} />
                 <Route path="/creator-community" element={<Community />} />
             </Routes>
-            <InfoBanner />
+            {!hideNavbar && <InfoBanner />}
         </>
     );
 }
