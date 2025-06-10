@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate, RouterProvider } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Login from "./login-register/login/Login";
 import Register from "./login-register/register/Register";
@@ -21,6 +21,7 @@ import Details from './components/Details';
 import ProductAll from './components/ProductAll';
 import Prelaunching from './prelaunchingPage/Prelaunching';
 import RecommandProjects from './recommandProject/Recopro'
+import router from "./Error/router";
 
 function App() {
     const [loading, setLoading] = useState(true);
@@ -34,6 +35,7 @@ function App() {
 
     return (
         <Router>
+            <RouterProvider router={router} />
             <Header />
             {/* <Navbar /> */}
             <Routes>
@@ -61,4 +63,34 @@ function App() {
     )
 }
 
-export default App
+export default App;
+
+// function App() {
+//   return <RouterProvider router={router} />;
+
+
+// //<ProductAll/>
+// //<Navbar/>
+// //<Details/>
+// //<Mypage/>
+// }
+
+// export default App;
+
+
+    // <div className="App">
+    //   <header className="App-header">
+    //     <img src={logo} className="App-logo" alt="logo" />
+    //     <p>
+    //       Edit <code>src/App.js</code> and save to reload.
+    //     </p>
+    //     <a
+    //       className="App-link"
+    //       href="https://reactjs.org"
+    //       target="_blank"
+    //       rel="noopener noreferrer"
+    //     >
+    //       Learn React
+    //     </a>
+    //   </header>
+    // </div>
