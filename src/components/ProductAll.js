@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 const ProductAll = () => {
 
-
     const [sortOrder, setSortOrder] = useState('all');
     const handleSortChange = (newSortValue) => {
         setSortOrder(newSortValue);
