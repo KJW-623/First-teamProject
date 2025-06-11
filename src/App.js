@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, Navigate, RouterProvider } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Login from "./login-register/login/Login";
 import Register from "./login-register/register/Register";
@@ -17,12 +17,12 @@ import Mypage from './components/Mypage';
 import HeartPage from './skill/heart/HeartPage';
 import NotificationPage from './skill/alarm/NotificationPage';
 import Details from './components/Details';
-//import Navbar from './components/Navbar';
 import ProductAll from './components/ProductAll';
 import Prelaunching from './prelaunchingPage/Prelaunching';
 import RecommandProjects from './recommandProject/Recopro'
-// import router from "./Error/router";
-// import ErrorPage from './Error/ErrorPage';
+import ErrorPage from './Error/ErrorPage';
+import Home from './main/Home';
+import EditProfile from './Edit/EditProfile';
 
 function App() {
     const [loading, setLoading] = useState(true);
@@ -36,9 +36,7 @@ function App() {
 
     return (
         <Router>
-            {/* <RouterProvider router={router} /> */}
             <Header />
-            {/* <Navbar /> */}
             <Routes>
                 <Route path="/" element={<Navigate to="/login" replace />} />
                 <Route path="/login" element={<Login />} />
@@ -57,7 +55,9 @@ function App() {
                 <Route path="/details" element={<Details />} />
                 <Route path="/open-soon" element={<Prelaunching />} />
                 <Route path="/RecommandProjects" element={<RecommandProjects />} />
-                {/* <Route path="/Error" element={<ErrorPage />} /> */}
+                <Route path="/home" element={<Home />} />
+                <Route path="/profile-edit" element={<EditProfile />} />
+                <Route path="*" element={<ErrorPage />} /> 
             </Routes>
             <InfoBanner />
         </Router>
@@ -65,33 +65,3 @@ function App() {
 }
 
 export default App;
-
-// function App() {
-//   return <RouterProvider router={router} />;
-
-
-// //<ProductAll/>
-// //<Navbar/>
-// //<Details/>
-// //<Mypage/>
-// }
-
-// export default App;
-
-
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>

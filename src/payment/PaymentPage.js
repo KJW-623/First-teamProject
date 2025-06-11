@@ -84,7 +84,7 @@ const PaymentPage = ({ product }) => {
             <div className="payment-page-container" style={{ textAlign: 'center', padding: '50px' }}>
                 <h2>상품 정보를 불러올 수 없습니다.</h2>
                 <p>상품 페이지를 통해 다시 접근해주세요.</p>
-                <button onClick={() => window.location.href='/'}>홈으로 돌아가기</button>
+                <button onClick={() => window.location.href='/home'}>홈으로 돌아가기</button>
             </div>
         );
     }
@@ -164,7 +164,7 @@ const PaymentPage = ({ product }) => {
                             type="email"
                             value={email}
                             onChange={handleEmailChange}
-                            placeholder="kimjs311@naver.com"
+                            placeholder="이메일을 입력하세요."
                             className="input-full"
                         />
                         {errors.email && <p className="error-message">{errors.email}</p>}

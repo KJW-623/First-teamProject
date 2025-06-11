@@ -1,10 +1,18 @@
-import {useState} from "react";
+import { useState } from "react";
 import "../Details.css";
 import { Link } from "react-router-dom";
 
-function Details () {
+function Details() {
 
-    const [mainImage, setMainImage] = useState("../images/커버표지-1.png")
+  const [mainImage, setMainImage] = useState("../images/커버표지-1.png")
+
+  const productData = {
+    id: "summer_001",
+    name: "여름나기 셔츠와 원피스, 반바지",
+    price: 30000,
+    image: mainImage,
+  };
+
   return (
     <div className="container">
       {/* 좌우 레이아웃 */}
@@ -13,25 +21,23 @@ function Details () {
         <div className="image-section">
           <img
             src={mainImage}
-            alt="메인 이미지"
             className="main-image"
           />
           <div className="thumbnails">
             {[1, 2, 3, 4].map((num) => {
-                const imagePath = `../images/커버표지-${num}.png`;
-                return(
-              <img
-                key={num}
-                src={imagePath} 
-                alt={`썸네일 ${num}`}
-                className={`thumbnail ${mainImage === imagePath ? "active" : ""}`}
-                onClick={()=>setMainImage(imagePath)}
-              />
-                );
+              const imagePath = `../images/커버표지-${num}.png`;
+              return (
+                <img
+                  key={num}
+                  src={imagePath}
+                  className={`thumbnail ${mainImage === imagePath ? "active" : ""}`}
+                  onClick={() => setMainImage(imagePath)}
+                />
+              );
             })}
           </div>
         </div>
-      
+
 
         {/* 정보 영역 */}
         <div className="info-section">
@@ -53,9 +59,10 @@ function Details () {
             <DetailItem label="결제" value="2025.06.17" />
             <DetailItem label="예상 발송 시작일" value="2025.07.07" />
           </div>
-          
-          <button className="likes-comments" style={{fontSize:'15px', backgroundColor:'white', border:'none'}}>❤️ 429 &nbsp; 💬 22</button> <Link to="/Payment">
-          <button className="support-btn" style={{width:'75%'}}>후원하기</button></Link>
+
+          <button className="likes-comments" style={{ fontSize: '15px', backgroundColor: 'white', border: 'none' }}>❤️ 429 &nbsp; 💬 22ㅤ</button>
+            <Link to={`/Payment/${productData.id}`}>
+            <button className="support-btn" style={{ width: '75%' }}>후원하기</button></Link>
         </div>
       </div>
     </div>
