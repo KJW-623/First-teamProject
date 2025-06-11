@@ -3,20 +3,15 @@ import ProductCard from "./ProductCard";
 import {Container, Row, Col} from "react-bootstrap";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import productsData from "../assets/data/products.json";
 
 
 const ProductAll =() => {
 const[productList, setProductList] = useState([]);
 
-    const getProducts = async()=>{
-        let url='http://localhost:5000/products'
-        let response = await fetch(url);
-        let data = await response.json();
-        setProductList(data);
-    };
-
+    
     useEffect(()=>{
-        getProducts();
+        setProductList(productsData);
     },[]);
 
     return (
