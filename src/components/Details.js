@@ -8,12 +8,12 @@ const projectDetailData = {
   price: 30000,
   images: [
     "../images/커버표지-1.png",
-    "../images/커버표지-2.png", // 실제 이미지 경로에 맞게 수정
+    "../images/커버표지-2.png",
     "../images/커버표지-3.png",
     "../images/커버표지-4.png",
   ],
-  currentFunding: 10617000, // 숫자 형태로 변경
-  fundingGoal: 500000,   // 숫자 형태로 변경
+  currentFunding: 10617000,
+  fundingGoal: 500000,
   remainingDays: 12,
   backers: 58,
   fundingPeriod: "2025.06.02 ~ 2025.06.16",
@@ -23,7 +23,7 @@ const projectDetailData = {
   comments: 22,
   creator: {
     name: "옷을 만드는 사람",
-    profileImage: "../images/creator-profile.png", // 예시 프로필 이미지 경로
+    profileImage: "../images/creator-profile.png",
     bio: "지속 가능한 패션을 추구하는 옷 제작자입니다. 환경을 생각하며 편안하고 스타일리시한 옷을 만듭니다.",
     projectsCount: 3,
   },
