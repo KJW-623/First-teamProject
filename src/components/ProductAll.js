@@ -256,7 +256,7 @@ const ProductAll = () => {
 
             <div className="slect-box">
                 <select className="slect-percentbox" style={{
-                    marginLeft: '30px',
+                    marginLeft: '200px',
                     marginBottom: '30px',
                     padding: "5px"
                 }}
@@ -286,8 +286,8 @@ const ProductAll = () => {
                     </div>
                     <div className="recopro-info">
                         <p style={{ fontSize: '10px' }}>fund</p>
-                        <h3>여름나기 셔츠와 원피스, 반바지</h3>
-                        <p style={{ fontSize: '12px' }}>원피스, 셔츠, 팬츠로 한복스런 여름나기</p>
+                        <h3>신:서울 여름나기 셔츠와 원피스, 반바지</h3>
+                        <p style={{ fontSize: '12px' }}>원피스, 셔츠, 팬츠로 한복스런 여름나기 :: 시원한 소재로 색다른 여름보내기</p>
                         <span style={{
                             fontWeight: 'bold',
                             fontSize: '18px',

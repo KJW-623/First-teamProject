@@ -7,7 +7,7 @@ const HeartCard = ({ project }) => {
     const formattedAmount = currentAmount.toLocaleString('ko-KR');
 
     return (
-        <div className="project-card">
+        <div className="Hproject-card">
             <div className="card-thumbnail">
                 <img src={imageUrl} alt={title} />
                 <div className="heart-icon">
