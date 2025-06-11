@@ -44,7 +44,7 @@ input[type="text"] {
 
 button[type="submit"] {
     padding: 10px 32px;
-    background-color: #4b8df8;
+    background-color: #20e9a5 ;
     color: white;
     border: none;
     border-radius: 6px;
@@ -55,7 +55,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #357ae8;
+    background-color: #20e9a5 ;
 }
 
 /* 패드(768px~1024px) */
