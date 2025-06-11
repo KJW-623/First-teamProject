@@ -10,14 +10,6 @@ function Community({ sponsorUserId, projectId, initialMessages = [] }) {
         setMessages(initialMessages);
     }, [initialMessages]);
 
-    useEffect(() => {
-        scrollToBottom();
-    }, [messages]);
-
-    const scrollToBottom = () => {
-        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-    };
-
     const handleSendMessage = (messageContent) => {
         const newMessage = {
             id: messages.length + 1,
