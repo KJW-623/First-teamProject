@@ -148,6 +148,7 @@ body {
     border-radius: 20px;
     overflow: hidden;
     background-color: #f5f5f5;
+    margin-left: 100px;
     flex-grow: 1;
 }
 
@@ -159,6 +160,7 @@ body {
     background-color: transparent;
     font-size: 0.95em;
     color: black;
+    
 }
 
 .search-bar input::placeholder {
@@ -190,6 +192,7 @@ body {
     position: absolute;
     margin-top: 25px;
     margin-left: -25px;
+    z-index: 10;
 }
 
 .cate-dropdown ul {
@@ -245,4 +248,87 @@ body {
 
 .Mypage-dropdown ul li:hover {
     color: #20e9a5;
+}
+
+@media (max-width: 768px) {
+    .main-header {
+        padding: 10px;
+    }
+
+    .header-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .header-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .header-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 15px;
+        margin-top: 15px;
+    }
+
+    .main-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .main-nav li {
+        margin: 5px 10px;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .my-dropdown {
+        top: unset;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .cate-dropdown {
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 90%;
+    }
+
+    .cate-dropdown ul {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header {
+        padding: 8px;
+    }
+
+    .action-link {
+        font-size: 0.85em;
+    }
+
+    .icon-button {
+        font-size: 18px;
+    }
+
+    .main-nav li a,
+    .category-button,
+    .search-bar input,
+    .search-button {
+        font-size: 0.9em;
+    }
+
+    .search-bar {
+        height: 35px;
+    }
 }

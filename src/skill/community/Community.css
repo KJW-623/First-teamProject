@@ -360,15 +360,6 @@ h1 {
     transition: background-color 0.2s ease;
 }
 
-.action-buttons .apply-button {
-    background-color: #20e9a5;
-    color: white;
-}
-
-.action-buttons .apply-button:hover {
-    background-color: #45b18d;
-}
-
 .action-buttons .end-chat-button {
     background-color: #f7f7f7;
     color: #666;

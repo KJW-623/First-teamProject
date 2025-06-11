@@ -88,7 +88,7 @@ const Header = () => {
                 <div className="search-bar">
                     <input type="text" placeholder="검색어를 입력해주세요." />
                     <button className="search-button">
-                        <i className="fas">검색</i>
+                        검색
                     </button>
                 </div>
             </nav>

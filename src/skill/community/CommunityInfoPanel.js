@@ -38,7 +38,6 @@ function CommunityInfoPanel({ projectInfo, creatorInfo }) {
                     <p>{projectInfo.note}</p>
                 </div>
                 <div className="action-buttons">
-                    <button className="apply-button">프로젝트 문의 요청</button>
                     <button className="end-chat-button">채팅 종료하기</button>
                 </div>
             </div>
