@@ -25,7 +25,7 @@ function Community({ sponsorUserId, projectId, initialMessages = [] }) {
     return (
         <div className="chat-room">
             <div className="chat-header">
-                <h2>{projectId} 채팅</h2>
+                <h2>{projectId}</h2>
             </div>
             <div className="message-list-container">
                 <CommunityList messages={messages} sponsorUserId={sponsorUserId} />
