@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Mypage.css";
 
 function Mypage() {
@@ -44,7 +45,7 @@ function Mypage() {
                     <div className="name-profile">
                         <div className="profile-shot">
                             <img
-                                src={user.profileImg || "/default-profile.png"}
+                                src={user.profileImg || "https://cdn.pixabay.com/photo/2022/07/18/19/57/dog-7330712_640.jpg"}
                                 width={120}
                             />
                         </div>
@@ -83,7 +84,8 @@ function Mypage() {
                 {/* 오른쪽: 콘텐츠 표시 영역 */}
                 <div className="layout-right">
                     <div className="profile-edit-button">
-                        <button >프로필 편집</button>
+                        <Link to="/profile-edit" className="action-link">
+                        <button >프로필 편집</button></Link>
                     </div>
 
 

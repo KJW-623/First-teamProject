@@ -68,7 +68,7 @@ a:focus {
     border: 1px solid #ccc;
     width: 150px;
     max-width: 100%;
-    height: auto;
+    height: 150px;
     object-fit: scale-down;
 }
 

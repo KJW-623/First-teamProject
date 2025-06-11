@@ -54,10 +54,8 @@ function Details () {
             <DetailItem label="예상 발송 시작일" value="2025.07.07" />
           </div>
           
-          <Link to="/Payment">
-          <button className="support-btn">후원하기</button></Link>
-
-          <div className="likes-comments">❤️ 429 &nbsp; 💬 22</div>
+          <button className="likes-comments" style={{fontSize:'15px', backgroundColor:'white', border:'none'}}>❤️ 429 &nbsp; 💬 22</button> <Link to="/Payment">
+          <button className="support-btn" style={{width:'75%'}}>후원하기</button></Link>
         </div>
       </div>
     </div>
