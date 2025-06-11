@@ -247,7 +247,6 @@ const ProductAll = () => {
     }, [sortOrder]);
 
     return (
-
         <>
             <div>
                 <h1 className="recopro-title" style={{

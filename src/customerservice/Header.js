@@ -5,7 +5,7 @@ function Header() {
         <header className="help-center-header">
             <div className="header-left">
                 <a href="/" className="logo">
-                    <img className="logo" src="../image/mintLogo.png" alt="Mint Logo" />
+                    <img className="logo" src="../images/mintLogo.png" alt="Mint Logo" />
                 </a>
                 <span className="separator"></span>
                 <span className="help-center-title">헬프센터</span>
