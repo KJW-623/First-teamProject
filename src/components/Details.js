@@ -15,9 +15,7 @@ function Details() {
 
   return (
     <div className="container">
-      {/* 좌우 레이아웃 */}
       <div className="layout">
-        {/* 이미지 영역 */}
         <div className="image-section">
           <img
             src={mainImage}
@@ -38,8 +36,6 @@ function Details() {
           </div>
         </div>
 
-
-        {/* 정보 영역 */}
         <div className="info-section">
           <span className="tag">🎁펀딩</span>
           <h1 className="title">여름나기 셔츠와 원피스, 반바지</h1>
@@ -61,7 +57,7 @@ function Details() {
           </div>
 
           <button className="likes-comments" style={{ fontSize: '15px', backgroundColor: 'white', border: 'none' }}>❤️ 429 &nbsp; 💬 22ㅤ</button>
-            <Link to={`/Payment/${productData.id}`}>
+            <Link to={`/Payment`}>
             <button className="support-btn" style={{ width: '75%' }}>후원하기</button></Link>
         </div>
       </div>
