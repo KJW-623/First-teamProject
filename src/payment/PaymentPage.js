@@ -22,11 +22,6 @@ const PaymentPage = () => {
         setFinalPaymentAmount(fundingAmount);
     }, [fundingAmount]);
 
-    const handleFundingAmountChange = (e) => {
-        const value = parseInt(e.target.value, 10);
-        setFundingAmount(isNaN(value) ? 0 : value);
-    };
-
     const handleNameChange = (e) => setName(e.target.value);
     const handleEmailChange = (e) => setEmail(e.target.value);
     const handleRewardCodeChange = (e) => setRewardCode(e.target.value);

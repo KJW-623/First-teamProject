@@ -256,8 +256,8 @@ const ProductAll = () => {
 
             <div className="slect-box">
                 <select className="slect-percentbox" style={{
-                    marginLeft: '200px',
-                    marginBottom: '30px',
+                    marginLeft: '30px',
+                    marginBottom: '10px',
                     padding: "5px"
                 }}
                     value={sortOrder}
