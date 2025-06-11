@@ -1,5 +1,5 @@
-{
-    "products":[
+[
+    
         {
             "id":0,
             "imgSrc":"/images/주술회전.png",
@@ -120,5 +120,4 @@
             "new":true
         }
     
-    ]
-}
+]

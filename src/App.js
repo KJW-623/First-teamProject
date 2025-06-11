@@ -20,7 +20,7 @@ import Mypage from './components/Mypage';
 import ProductAll from './components/ProductAll';
 import RecommandProjects from './recommandProject/Recopro'
 //import ProductAll from './components/ProductAll'; // 가져온 ProductAll
-//import Details from './components/Details'; // 가져온 Details
+import Details from './components/Details'; // 가져온 Details
 
 function App() {
     const [ loading, setLoading ] = useState(true);
@@ -54,8 +54,8 @@ function App() {
                 <Route path="/RecommandProjects" element={<RecommandProjects />} />
                 {/* <Route path="/AllProduct" element={<ProductAll />} /> */}
                 {/* 추가된 라우트를 여기에 추가 */}
-                {/* <Route path="/products" element={<ProductAll />} /> */}
-                {/* <Route path="/details" element={<Details />} /> */}
+                <Route path="/popular" element={<ProductAll />} />
+                <Route path="/details/:id" element={<Details />} />
             </Routes>
 
             <InfoBanner />
