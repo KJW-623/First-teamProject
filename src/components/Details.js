@@ -50,7 +50,8 @@ const projectDetailData = {
     { id: 1, name: "[얼리버드] 여름 린넨 셔츠 (단품)", price: 30000, description: "시원하고 가벼운 린넨 셔츠 한 벌. (정가 35,000원)", deliveryDate: "2025년 7월 7일 발송 예정", limit: 100, current: 85 },
     { id: 2, name: "[얼리버드] 여름 린넨 원피스 (단품)", price: 45000, description: "데일리로 입기 좋은 편안한 린넨 원피스. (정가 50,000원)", deliveryDate: "2025년 7월 7일 발송 예정", limit: 80, current: 60 },
     { id: 3, name: "[세트] 린넨 셔츠 + 반바지", price: 60000, description: "린넨 셔츠와 시원한 반바지 세트.", deliveryDate: "2025년 7월 7일 발송 예정", limit: 50, current: 30 },
-    { id: 4, name: "[풀패키지] 셔츠 + 원피스 + 반바지", price: 100000, description: "여름 컬렉션 전 품목을 경험해보세요!", deliveryDate: "2025년 7월 7일 발송 예정", limit: 20, current: 5 }
+    { id: 4, name: "[풀패키지] 셔츠 + 원피스 + 반바지", price: 100000, description: "여름 컬렉션 전 품목을 경험해보세요!", deliveryDate: "2025년 7월 7일 발송 예정", limit: 20, current: 5 },
+    { id: 5, name: "자유 후원하기", price: 0, description: "응원하는 만큼 후원해주세요!", deliveryDate: "2025년 0월 0일 발송 예정", limit: 100, current: 100 }
   ],
   communityPosts: [
     { id: 1, author: "옷을 만드는 사람", date: "2025.06.05", content: "프로젝트 시작 후 많은 분들의 관심과 후원에 감사드립니다! 초기 목표를 달성했습니다!" },
