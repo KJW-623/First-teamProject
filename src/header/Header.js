@@ -32,23 +32,23 @@ const Header = () => {
                         <Link to="/Community" className="action-link">💬</Link>
                     </button>
                     <div className="profile-dropdown">
-                            <button className="profile-button" onClick={() => setIsMyOpen(!isMyOpen)}>
-                                <div className="profile-image-container">
-                                    <img
-                                        src="https://cdn.pixabay.com/photo/2022/07/18/19/57/dog-7330712_640.jpg"
-                                        alt="프로필 사진"
-                                        className="profile-image"
-                                    />
-                                </div>FundFlow
-                            </button>
-                            {isMyOpen && (
-                                <div className="Mypage-dropdown">
-                                    <ul>
-                                        <Link to="/MyPage" className="action-link"><li>마이페이지</li></Link>
-                                        <Link to="/login" className="action-link"><li>로그아웃</li></Link>
-                                    </ul>
-                                </div>
-                            )}
+                        <button className="profile-button" onClick={() => setIsMyOpen(!isMyOpen)}>
+                            <div className="profile-image-container">
+                                <img
+                                    src="https://cdn.pixabay.com/photo/2022/07/18/19/57/dog-7330712_640.jpg"
+                                    alt="프로필 사진"
+                                    className="profile-image"
+                                />
+                            </div>FundFlow
+                        </button>
+                        {isMyOpen && (
+                            <div className="Mypage-dropdown">
+                                <ul>
+                                    <Link to="/MyPage" className="action-link"><li>마이페이지</li></Link>
+                                    <Link to="/login" className="action-link"><li>로그아웃</li></Link>
+                                </ul>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
