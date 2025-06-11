@@ -1,41 +1,33 @@
-import React from "react";
-import { useRouteError, Link } from "react-router-dom";
-import './ErrorPage.css';
+import { Link } from "react-router-dom";
 
 function ErrorPage() {
-    const error = useRouteError();
-    let status = 404;
-    if (error?.status) {
-        status = error.status;
-    }else if (error?.message?.includes("Failed to fatch")) {
-        status = 500;
-    }
-     
-    const message =
-        error?.data?.message ||
-        error?.statusText ||
-        (status === 404
-            ? "존재하지 않는 페이지입니다."
-            : "알 수 없는 오류가 발생했습니다.");
+
+    const status = 404;
+    const message = "존재하지 않는 페이지입니다.";
 
     return (
         <div style={{ padding: "100px", textAlign: "center" }}>
             <h1>🚫 {status} 오류</h1>
             <p>{message}</p>
             <Link
-                to="/"
+                to="/home"
                 style={{
-                    color: "#ff6b6b",
+                    color: "#20e9a5",
                     textDecoration: "underline",
                     fontWeight: "bold",
                 }}
             >
-                홈으로 돌아가기
+                <button style={{
+                    backgroundColor:'#20e9a5',
+                    border:'none',
+                    color: 'white',
+                    fontSize:'15px',
+                    padding: '10px 10px',
+                    borderRadius:'15px'
+                }}>홈으로 돌아가기</button>
             </Link>
         </div>
     );
 }
-
-//404에러 페이지 컴포넌트
 
 export default ErrorPage;
