@@ -10,7 +10,7 @@ function infoBanner() {
             <footer className="footer">
                 <div className="footerWrapper">
                     <div className="subWrapLeft">
-                        <img className="logo" src="../image/mintLogo.png" />
+                        <img className="logo" src="/images/mintlogo.png" />
                         <div className="customerService">
                             <div className="csInfo">
                                 <span className="csName">고객센터</span>
