@@ -1,0 +1,186 @@
+.profile-edit-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #333;
+}
+
+.profile-edit-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #20e9a5;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.profile-edit-subtitle {
+    font-size: 1.1em;
+    color: #666;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.profile-edit-form section {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border: 1px solid #eee;
+}
+
+.profile-edit-form section h2 {
+    font-size: 1.8em;
+    color: #444;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+.profile-image-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-image-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-preview-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.change-image-button {
+    background-color: #f0f0f0;
+    color: #555;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 0.90em;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.change-image-button:hover {
+    background-color: #20e9a5;
+    color: white;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    text-align: left;
+    font-size: 0.90em;
+    color: #555;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="url"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #20e9a5;
+    box-shadow: 0 0 0 3px rgba(32, 233, 165, 0.2);
+    outline: none;
+}
+
+.form-group textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.form-group input[disabled] {
+    background-color: #e9e9e9;
+    cursor: not-allowed;
+    color: #777;
+}
+
+.success-message {
+    background-color: #e6ffe6;
+    color: #28a745;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+    animation: fadeInOut 3s forwards;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+
+.form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.Esave-button {
+    background-color: #20e9a5;
+    color: #fff;
+    font-size: 1.1em;
+    box-shadow: 0 4px 10px rgba(32, 233, 165, 0.3);
+    padding: 10px 30px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Esave-button:hover {
+    background-color: #1ac88b;
+    box-shadow: 0 6px 15px rgba(32, 233, 165, 0.4);
+}
+
+.cancel-button {
+    background-color: #f0f0f0;
+    color: #555;
+    font-size: 1.1em;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cancel-button:hover {
+    background-color: #e0e0e0;
+    color: #333;
+}
