@@ -1,7 +1,6 @@
 import React from "react";
 import "./Login.css";
-import { Link, Navigate } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import whiteLogo from "../../images/화이트 로고.png";
 
 
@@ -24,7 +23,7 @@ function Login() {
         const user = users.find(u => u.email === email && u.password === password);
         if (user) {
             alert("로그인 성공!");
-            // 로그인 성공하면 홈페이지로 이동할 navigate 추가예정
+            navigate('/home');
         } else {
             setError("이메일 또는 비밀번호가 올바르지 않습니다.");
         }
