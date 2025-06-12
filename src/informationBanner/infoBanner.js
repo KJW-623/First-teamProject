@@ -2,6 +2,7 @@ import './infoBanner.css';
 import { RiFacebookFill } from 'react-icons/ri';
 import { FiInstagram } from 'react-icons/fi';
 import { FaYoutube } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 function infoBanner() {
     return (
@@ -9,7 +10,7 @@ function infoBanner() {
             <footer className="footer">
                 <div className="footerWrapper">
                     <div className="subWrapLeft">
-                        <img className="logo" src="../image/mintLogo.png" alt="Mint Logo" />
+                        <img className="logo" src="/images/mintlogo.png" />
                         <div className="customerService">
                             <div className="csInfo">
                                 <span className="csName">고객센터</span>
@@ -74,7 +75,7 @@ function infoBanner() {
                             <div className="cs-time-image">
                                 평일 9:00 - 17:30 (<span className="highlight-time">12:50 - 13:40 제외</span>)
                             </div>
-                            <button className="inquiry-button">펀드플로우에 문의</button>
+                            <Link to="/HelpCenter"><button className="inquiry-button">펀드플로우에 문의</button></Link>
                         </div>
 
                         <div className="companyInfo">

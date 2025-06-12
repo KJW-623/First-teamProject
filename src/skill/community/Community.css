@@ -21,7 +21,7 @@ h1 {
     text-align: center;
     color: #333;
     margin-bottom: 20px;
-    font-size: 1.8em;
+    font-size: 1.5em;
 }
 
 .chat-layout-container {
@@ -358,15 +358,6 @@ h1 {
     cursor: pointer;
     font-size: 1em;
     transition: background-color 0.2s ease;
-}
-
-.action-buttons .apply-button {
-    background-color: #20e9a5;
-    color: white;
-}
-
-.action-buttons .apply-button:hover {
-    background-color: #45b18d;
 }
 
 .action-buttons .end-chat-button {

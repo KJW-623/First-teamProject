@@ -1,10 +1,14 @@
 import { useState, useEffect, useCallback } from 'react';
+import { useLocation } from 'react-router-dom';
 import './PaymentPage.css';
 
+const PaymentPage = () => {
+    const location = useLocation();
+    const { project, selectedReward } = location.state || {};
 
-const PaymentPage = ({ product }) => {
+    const initialFundingAmount = selectedReward ? selectedReward.price : 0;
 
-    const [fundingAmount, setFundingAmount] = useState(1000);
+    const [fundingAmount, setFundingAmount] = useState(initialFundingAmount);
     const [agreedToTerms, setAgreedToTerms] = useState(false);
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -15,15 +19,8 @@ const PaymentPage = ({ product }) => {
     const [errors, setErrors] = useState({});
 
     useEffect(() => {
-        const basePrice = product ? product.price : 0;
-        const calculatedAmount = basePrice + fundingAmount;
-        setFinalPaymentAmount(calculatedAmount);
-    }, [fundingAmount, product]);
-
-    const handleFundingAmountChange = (e) => {
-        const value = parseInt(e.target.value, 10);
-        setFundingAmount(isNaN(value) ? 0 : value);
-    };
+        setFinalPaymentAmount(fundingAmount);
+    }, [fundingAmount]);
 
     const handleNameChange = (e) => setName(e.target.value);
     const handleEmailChange = (e) => setEmail(e.target.value);
@@ -70,7 +67,8 @@ const PaymentPage = ({ product }) => {
             rewardCode,
             finalPaymentAmount,
             agreedToTerms,
-            receivedProduct: product
+            receivedProject: project,
+            receivedReward: selectedReward
         });
 
         await new Promise(resolve => setTimeout(resolve, 2000));
@@ -78,16 +76,6 @@ const PaymentPage = ({ product }) => {
         alert('결제가 성공적으로 요청되었습니다!');
         setIsSubmitting(false);
     };
-
-    if (!product || !product.name || typeof product.price === 'undefined') {
-        return (
-            <div className="payment-page-container" style={{ textAlign: 'center', padding: '50px' }}>
-                <h2>상품 정보를 불러올 수 없습니다.</h2>
-                <p>상품 페이지를 통해 다시 접근해주세요.</p>
-                <button onClick={() => window.location.href='/'}>홈으로 돌아가기</button>
-            </div>
-        );
-    }
 
     return (
         <div className="payment-page-container">
@@ -98,34 +86,32 @@ const PaymentPage = ({ product }) => {
 
             <form onSubmit={handleSubmit} className="payment-form">
                 <section className="product-info-section">
-                    <h3>상품 정보</h3>
+                    <h3>선택한 리워드 정보</h3>
                     <div className="product-details">
-                        <img src={product.image || 'https://cdn.pixabay.com/photo/2016/02/22/09/44/chess-1215079_640.jpg'} alt={product.name} className="product-image" />
+                        <img src={project?.images?.[0] || 'https://img.tumblbug.com/eyJidWNrZXQiOiJ0dW1ibGJ1Zy1pbWctYXNzZXRzIiwia2V5Ijoic3RvcnkvODVlYmI1YTYtMWIzZS00M2IzLWEyMDEtMTJiNjIyOTlhOGU1LzQzMzQxN2RiLTUyYTEtNDRiNS04NmRlLWY1MjE4MjQ4YzAzMy5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyNDAsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX19fQ=='} alt={selectedReward?.name || '기본 상품 이미지'} className="product-image" />
                         <div className="product-text">
-                            <h4>{product.name}</h4>
+                            <h4>{selectedReward?.name || '자유 후원하기'}</h4>
                             <p>
-                                <strong>{product.price.toLocaleString()}원</strong>
-                                {product.discount && <span className="discount">{product.discount.toLocaleString()}원</span>}
+                                <strong>{(selectedReward?.price || 0).toLocaleString()}원</strong>
+                                {selectedReward?.discount && <span className="discount">{selectedReward.discount.toLocaleString()}원</span>}
                             </p>
+                            <p>{selectedReward?.description || '자유 후원하기.'}</p>
                         </div>
                     </div>
                 </section>
+
                 <section className="funding-options-section">
                     <h3>선물 구성</h3>
                     <div className="form-group">
-                        <label>선물 없이 후원하기</label>
-                        <input type="checkbox" />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="fundingAmount">선물 금액</label>
+                        <label htmlFor="fundingAmount">선택한 리워드 금액</label>
                         <input
                             id="fundingAmount"
                             type="number"
                             value={fundingAmount}
-                            onChange={handleFundingAmountChange}
                             min="0"
-                            className="input-small"
-                        /> 원
+                            className="Pinput-small"
+                            disabled
+                        />
                     </div>
                     <div className="form-group">
                         <label htmlFor="additionalFunding">추가 후원금 (선택)</label>
@@ -135,10 +121,9 @@ const PaymentPage = ({ product }) => {
                                 type="number"
                                 value={0}
                                 onChange={() => { }}
-                                className="input-small"
+                                className="Pinput-small"
                                 disabled
-                            /> 원
-                            <p className="help-text">❤️ 후원 증가만으로도 프로젝트에 더 큰 힘이 될 수 있어요!</p>
+                            />
                         </div>
                     </div>
                 </section>
@@ -152,7 +137,7 @@ const PaymentPage = ({ product }) => {
                             type="text"
                             value={name}
                             onChange={handleNameChange}
-                            placeholder="010-8493-8365"
+                            placeholder="연락처를 입력하세요."
                             className="input-full"
                         />
                         {errors.name && <p className="error-message">{errors.name}</p>}
@@ -164,7 +149,7 @@ const PaymentPage = ({ product }) => {
                             type="email"
                             value={email}
                             onChange={handleEmailChange}
-                            placeholder="kimjs311@naver.com"
+                            placeholder="이메일을 입력하세요."
                             className="input-full"
                         />
                         {errors.email && <p className="error-message">{errors.email}</p>}
@@ -231,7 +216,6 @@ const PaymentPage = ({ product }) => {
                     <p className="info-text">
                         리워드는 등록된 날짜 (2025.06.13)에 배송됩니다. 프로젝트가 무산되거나 연기된 경우, 배송은 지연될 수 있습니다.
                     </p>
-
                     <div className="terms-checkbox">
                         <input
                             type="checkbox"
@@ -239,23 +223,23 @@ const PaymentPage = ({ product }) => {
                             checked={agreedToTerms}
                             onChange={handleTermsChange}
                         />
-                        <label htmlFor="termsAgreement">전체 동의</label>
+                        <p htmlFor="termsAgreement">전체 동의</p>
                         {errors.terms && <p className="error-message">{errors.terms}</p>}
                     </div>
                     <ul className="terms-list">
                         <li>
-                            <input type="checkbox" id="term1" checked={agreedToTerms} onChange={handleTermsChange} disabled />
-                            <label htmlFor="term1">후원에 대한 비회원 개인정보 수집 및 이용 동의</label>
+                            <input type="checkbox" id="term1" checked={agreedToTerms} onChange={handleTermsChange}/>
+                            <p htmlFor="term1">후원에 대한 비회원 개인정보 수집 및 이용 동의</p>
                             <span className="view-details">자세히 보기</span>
                         </li>
                         <li>
-                            <input type="checkbox" id="term2" checked={agreedToTerms} onChange={handleTermsChange} disabled />
-                            <label htmlFor="term2">텀블벅은 플랫폼의 특성상 프로젝트의 진척이 늦어지거나 중단될 수 있으며, 배송은 예정보다 지연될 수 있음을 고지합니다.</label>
+                            <input type="checkbox" id="term2" checked={agreedToTerms} onChange={handleTermsChange}/>
+                            <p htmlFor="term2">펀드플로우는 프로젝트의 진척이 늦어지거나 중단될 수 있으며 배송은 지연될 수 있습니다.</p>
                             <span className="view-details">자세히 보기</span>
                         </li>
                         <li>
-                            <input type="checkbox" id="term3" checked={agreedToTerms} onChange={handleTermsChange} disabled />
-                            <label htmlFor="term3">프로젝트에 대한 결제 실행 및 수령 동의</label>
+                            <input type="checkbox" id="term3" checked={agreedToTerms} onChange={handleTermsChange} />
+                            <p htmlFor="term3">프로젝트에 대한 결제 실행 및 수령 동의</p>
                             <span className="view-details">자세히 보기</span>
                         </li>
                     </ul>
@@ -268,12 +252,6 @@ const PaymentPage = ({ product }) => {
                     {isSubmitting ? '결제 진행 중...' : '후원하기'}
                 </button>
             </form>
-
-            <footer className="payment-footer">
-                <p>이용약관 | 개인정보처리방침 | 고객센터</p>
-                <p>펀드플로우에서는 취급하는 모든 개인정보는 서비스 이용 및 통신에만 사용되며, 비회원 가입, 선후원, 개인 취급 등을 위해 개인정보를 요청하지 않습니다.</p>
-                <p>© 2025 FundFlow Inc.</p>
-            </footer>
         </div>
     );
 };

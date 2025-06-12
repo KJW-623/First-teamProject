@@ -10,14 +10,6 @@ function Community({ sponsorUserId, projectId, initialMessages = [] }) {
         setMessages(initialMessages);
     }, [initialMessages]);
 
-    useEffect(() => {
-        scrollToBottom();
-    }, [messages]);
-
-    const scrollToBottom = () => {
-        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-    };
-
     const handleSendMessage = (messageContent) => {
         const newMessage = {
             id: messages.length + 1,
@@ -33,7 +25,7 @@ function Community({ sponsorUserId, projectId, initialMessages = [] }) {
     return (
         <div className="chat-room">
             <div className="chat-header">
-                <h2>{projectId} 채팅</h2>
+                <h2>{projectId}</h2>
             </div>
             <div className="message-list-container">
                 <CommunityList messages={messages} sponsorUserId={sponsorUserId} />
