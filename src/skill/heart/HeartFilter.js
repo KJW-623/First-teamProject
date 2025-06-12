@@ -1,7 +1,9 @@
 import './Heart.css';
 
+//sortOrder, onSortChange 받기
 const HeartFilter = ({ sortOrder, onSortChange }) => {
     return (
+        //최신순, 인기순 필터링
         <div className="Heart-filter">
             <div className="Heart-options">
                 <select

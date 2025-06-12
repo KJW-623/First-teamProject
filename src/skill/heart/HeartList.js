@@ -2,8 +2,10 @@
 import HeartCard from './HeartCard';
 import './Heart.css';
 
+//projects, activeTab 받기
 const HeartList = ({ projects, activeTab }) => {
     if (projects.length === 0) {
+        //비어있는 경우
         if (activeTab === 'notified') {
             return (
                 <div className="no-projects-message">
@@ -19,6 +21,7 @@ const HeartList = ({ projects, activeTab }) => {
     }
 
     return (
+        //project 매핑후 데이터 렌더링
         <div className="project-list-grid">
             {projects.map((project) => (
                 <HeartCard key={project.id} project={project} />
