@@ -35,7 +35,7 @@ function App() {
     if (loading) return <PageLoading />;
 
     return (
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
             <Header />
             <Routes>
                 <Route path="/" element={<Navigate to="/login" replace />} />

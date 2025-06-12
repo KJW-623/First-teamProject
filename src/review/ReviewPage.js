@@ -5,6 +5,7 @@ import ReviewFilters from './ReviewFilters';
 import ReviewList from './ReviewList';
 import './Review.css';
 
+//리뷰 데이터
 const Reviews = [
     {
         id: 1,
@@ -54,27 +55,33 @@ const Reviews = [
     }
 ];
 
+//창작자 정보
 const creatorInfo = {
-    avatar: 'https://cdn.pixabay.com/photo/2025/05/26/14/25/pied-flycatcher-9623545_640.jpg',
-    name: '민이',
+    avatar: 'https://img.tumblbug.com/eyJidWNrZXQiOiJ0dW1ibGJ1Zy1pbWctYXNzZXRzIiwia2V5IjoiY292ZXIvODVlYmI1YTYtMWIzZS00M2IzLWEyMDEtMTJiNjIyOTlhOGU1Lzk2NzA1MmNkLWE1NzgtNDI2Yi04NDUyLTMzMzVjMGJlZjQxNC5qcGVnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMjQwLCJoZWlnaHQiOjEyNDAsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX19fQ==',
+    name: '옷을 만드는 사람들',
     level: 40,
     followers: 1234,
 };
 
 function ReviewPage() {
+
+    //리뷰 상태 업데이트
     const [reviews, setReviews] = useState(Reviews);
+    //최신순 필터링
     const [sortBy, setSortBy] = useState('latest');
+    //별 필터링
     const [minRating, setMinRating] = useState(0);
 
+    //
     const filteredAndSortedReviews = [...reviews]
         .filter(review => {
             return minRating === 0 || review.rating === minRating;
         })
         .sort((a, b) => {
-            if (sortBy === 'latest') {
+            if (sortBy === 'latest') { //최신순
                 return new Date(b.date) - new Date(a.date);
             }
-            if (sortBy === 'recommended') {
+            if (sortBy === 'recommended') { //추천순(별)
                 if (b.rating !== a.rating) {
                     return b.rating - a.rating;
                 }
@@ -85,10 +92,13 @@ function ReviewPage() {
 
     return (
         <div className="review-page-container">
+            {/* 리뷰 상단 */}
             <h1 className="page-title">후기</h1>
 
+            {/* 창작자 정보 */}
             <ReviewHeader creatorInfo={creatorInfo} activeTab="reviews" />
 
+            {/* 리뷰 필터링 */}
             <ReviewFilters
                 sortBy={sortBy}
                 setSortBy={setSortBy}
@@ -96,6 +106,7 @@ function ReviewPage() {
                 setMinRating={setMinRating}
             />
 
+            {/* 리뷰 보여주기 */}
             <ReviewList reviews={filteredAndSortedReviews} />
         </div>
     );

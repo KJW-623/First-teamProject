@@ -4,10 +4,12 @@ import './Header.css';
 
 const Header = () => {
 
+    //헤더 숨김 페이지
     const location = useLocation();
     const shouldHideHeader = location.pathname === '/login' || location.pathname === '/HelpCenter' || location.pathname === '/register'
         || location.pathname === '/FoundID' || location.pathname === '/FoundPW';
 
+    //카테고리 및 프로필 드롭다운
     const [isCateOpen, setIsCateOpen] = useState(false);
     const [isMyOpen, setIsMyOpen] = useState(false);
 
@@ -16,10 +18,12 @@ const Header = () => {
     }
     return (
         <header className="main-header">
+            {/* 헤더 상단 */}
             <div className="header-top">
                 <div className="header-logo">
-                    <Link to="/home"><img className="logo" src="/images/mintlogo.png" /></Link>
+                    <Link to="/home"><img className="logo" src={process.env.PUBLIC_URL + "/images/mintLogo.png"} alt="Mint Logo" /></Link>
                 </div>
+                {/* 헤더 우측 상단 */}
                 <div className="header-actions">
                     <Link to="/ProjectCreate" className="action-link">프로젝트 생성</Link>
                     <button className="icon-button">
@@ -31,6 +35,7 @@ const Header = () => {
                     <button className="icon-button">
                         <Link to="/Community" className="action-link">💬</Link>
                     </button>
+                    {/* 프로필 드롭다운 */}
                     <div className="profile-dropdown">
                         <button className="profile-button" onClick={() => setIsMyOpen(!isMyOpen)}>
                             <div className="profile-image-container">
@@ -53,9 +58,11 @@ const Header = () => {
                 </div>
             </div>
 
+            {/* 헤더 하단 */}
             <nav className="header-nav">
                 <ul className="nav-links">
                     <li>
+                        {/* 헤더 카테고리 드롭 다운 및 네비 */}
                         <button className="category-button">
                             <i className="fas" onClick={() => setIsCateOpen(!isCateOpen)}>카테고리</i>
                         </button>
@@ -85,6 +92,7 @@ const Header = () => {
                     <li><Link to="/open-soon">공개예정</Link></li>
                     <li><Link to="/RecommandProjects">MD 추천</Link></li>
                 </ul>
+                {/* 헤더 검색바 */}
                 <div className="search-bar">
                     <input type="text" placeholder="검색어를 입력해주세요." />
                     <button className="search-button">

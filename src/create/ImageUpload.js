@@ -1,9 +1,13 @@
 import { useState, useEffect } from 'react';
 import './ImageUpload.css';
 
+//onImageChange, currentImage 받기
 function ImageUpload({ onImageChange, currentImage }) {
+
+    //미리보기 주소 상태 관리
     const [previewUrl, setPreviewUrl] = useState(null);
 
+    //외부 전달 값으로 설정하는 미리보기
     useEffect(() => {
         if (currentImage instanceof File) {
             const reader = new FileReader();
@@ -18,6 +22,7 @@ function ImageUpload({ onImageChange, currentImage }) {
         }
     }, [currentImage]);
 
+    //파일 변경
     const handleFileChange = (e) => {
         const file = e.target.files[0];
         if (file) {

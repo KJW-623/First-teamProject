@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
 
-
+// projectInfo, creatorInfo 데이터 받기
 function CommunityInfoPanel({ projectInfo, creatorInfo }) {
     return (
         <div className="chat-info-panel">
+            {/* 창작자 정보 */}
             <div className="info-section">
                 <h3>창작자 정보</h3>
                 <div className="profile-info">
@@ -14,6 +16,7 @@ function CommunityInfoPanel({ projectInfo, creatorInfo }) {
                         <span className="level">Lv.{creatorInfo.level} ({creatorInfo.rating})</span>
                     </div>
                 </div>
+                {/* 기간, 메모 등등... 표시 */}
                 <div className="profile-stats">
                     <div className="profile-stat-item">
                         <strong>{creatorInfo.totalOrders}</strong>
@@ -27,9 +30,14 @@ function CommunityInfoPanel({ projectInfo, creatorInfo }) {
                         <strong>{creatorInfo.reviews}</strong>
                         <span>평가</span>
                     </div>
+                    
                 </div>
+                {/* 창작자 후기 페이지 연결 */}
+                <Link to='/Review'>
+                <button className="review-btn">창작자 후기 보러가기</button></Link>
             </div>
 
+            {/* 프로젝트 설명 등 표시 칸 */}
             <div className="info-section">
                 <h3>프로젝트 정보</h3>
                 <div className="project-details">

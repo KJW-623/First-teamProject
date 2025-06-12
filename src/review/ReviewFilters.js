@@ -1,5 +1,6 @@
 
 
+//최신, 추천, 별 개수로 필터링 하기
 function ReviewFilters({ sortBy, setSortBy, minRating, setMinRating }) {
     const handleRatingChange = (e) => {
         setMinRating(Number(e.target.value));
