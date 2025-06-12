@@ -1,5 +1,5 @@
 
-
+//알림 탭 전환
 const NotificationTabs = ({ activeTab, onTabChange }) => {
     return (
         <div className="notification-tabs">
