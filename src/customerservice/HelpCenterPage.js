@@ -8,9 +8,13 @@ import './HelpCenterPage.css';
 import Header from './Header.js';
 
 function HelpCenterPage() {
+
+    //현재 FAQ 저장 
     const [currentFaqs, setCurrentFaqs] = useState([]);
+    //카테고리 상태 관리
     const [selectedCategory, setSelectedCategory] = useState('all');
 
+    //선택에 따라 표시될 FAQ 목록 업데이트
     useEffect(() => {
         if (selectedCategory === 'all') {
             setCurrentFaqs(faqData);
@@ -19,19 +23,23 @@ function HelpCenterPage() {
         }
     }, [selectedCategory]);
 
+    //검색입력 버튼 클릭 호출
     const handleSearch = (searchTerm) => {
         const filteredFaqs = faqData.filter(
             (faq) =>
+                //대소문자 구분 무시
                 faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 faq.answer.toLowerCase().includes(searchTerm.toLowerCase())
         );
         setCurrentFaqs(filteredFaqs);
     };
 
+    //카테고리 필터링
     const handleCategoryChange = (categoryId) => {
         setSelectedCategory(categoryId);
     };
 
+    //폼 제출
     const handleContactSubmit = (formData) => {
         console.log('문의 제출됨:', formData);
         alert('문의가 성공적으로 접수되었습니다!');

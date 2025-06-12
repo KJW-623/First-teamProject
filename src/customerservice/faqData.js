@@ -1,3 +1,4 @@
+//자주 묻는 질문 카테고리
 export const categories = [
     { id: 'all', name: '전체' },
     { id: 'funding', name: '후원' },
@@ -6,6 +7,7 @@ export const categories = [
     { id: 'account', name: '계정' },
 ];
 
+//자주 묻는 질문 데이터
 export const faqData = [
     {
         id: 1,
