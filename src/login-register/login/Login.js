@@ -67,6 +67,13 @@ function Login() {
                     <Link to="/register">회원가입</Link>
                 </div>
                 <br />
+                <div className="divider"><span>다른 방법으로 시작하기</span></div>
+                <div style={{ display: "flex", justifyContent: "center", gap: "24px", margin: "16px 0" }}>
+                    <img src="https://w7.pngwing.com/pngs/344/368/png-transparent-naver-round-logo-search-engines-thumbnail.png" alt="네이버 로그인" className="loginOtherWay" />
+                    <img src="https://cdn.iconscout.com/icon/free/png-256/free-kakaotalk-3185087-2661829.png?f=webp" alt="카카오 로그인" className="loginOtherWay" />
+                    <img src="https://img.icons8.com/fluent/512/meta.png" alt="메타 로그인" className="loginOtherWay" />
+                    <img src="https://img.freepik.com/free-vector/instagram-vector-social-media-icon-7-june-2021-bangkok-thailand_53876-136728.jpg?semt=ais_hybrid&w=740" alt=" 로그인" className="loginOtherWay" />
+                </div>
                 <br />
                 <Link to="/FoundPW">아이디/비밀번호 찾기</Link>
             </div>

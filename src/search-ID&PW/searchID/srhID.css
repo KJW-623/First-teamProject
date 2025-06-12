@@ -51,7 +51,6 @@ label {
 
 .EmailINPUT {
     position: relative;
-    right: 25px;
 }
 
 input[type="email"] {
