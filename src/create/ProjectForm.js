@@ -4,6 +4,8 @@ import ProjectPreview from './ProjectPreview';
 import './ProjectForm.css';
 
 function ProjectForm() {
+
+    //project 관리
     const [project, setProject] = useState({
         title: '',
         category: '',
@@ -12,6 +14,7 @@ function ProjectForm() {
         mainImage: null,
     });
 
+    //텍스트 입력
     const handleChange = (e) => {
         const { name, value } = e.target;
         setProject({
@@ -20,6 +23,7 @@ function ProjectForm() {
         });
     };
 
+    //이미지 파일 선택
     const handleImageChange = (imageFile) => {
         setProject({
             ...project,
@@ -27,6 +31,7 @@ function ProjectForm() {
         });
     };
 
+    //폼 제출
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('프로젝트 제출:', project);
@@ -42,6 +47,7 @@ function ProjectForm() {
 
     return (
         <div className="project-form-container">
+            {/* 프로젝트 폼 작성란 */}
             <form onSubmit={handleSubmit} className="project-form">
                 <div className="form-group">
                     <label htmlFor="title">프로젝트 제목:</label>
@@ -55,7 +61,6 @@ function ProjectForm() {
                         required
                     />
                 </div>
-
                 <div className="form-group">
                     <label htmlFor="category">카테고리:</label>
                     <select
@@ -127,6 +132,7 @@ function ProjectForm() {
 
             <div className="project-preview-section">
                 <h2>프로젝트 미리보기</h2>
+                {/* 미리보기 렌더링 */}
                 <ProjectPreview project={project} />
             </div>
         </div>
