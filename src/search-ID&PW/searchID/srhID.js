@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./srhID.css";
 import mintLogo from "../../images/민트 로고.png";
 
@@ -15,7 +15,7 @@ function SrhID() {
         const users = JSON.parse(localStorage.getItem("users") || "[]");
         const user = users.find(u => u.email === email);
         if (user) {
-            setFoundID(user.email);
+            setFoundID(user.userId);
         } else {
             setError("해당 이메일로 등록된 아이디가 없습니다.");
         }
@@ -24,14 +24,10 @@ function SrhID() {
     return (
     <div className="srh-id-outer">
         <div className="srh-id-container">
-            <img
-                src={mintLogo}
-                alt="FundFlow Logo"
-                className="mintLogo"
-            />
+            <img src={mintLogo} alt="FundFlow Logo" className="mintLogo" />
             <h2>아이디 찾기</h2>
             <h4 style={{ opacity: '0.35', textAlign: 'left' }}>
-                가입한 이메일 계정을 입력하면 비밀번호를 재설정할 수 있는 링크를 이메일로 발송해 드립니다.
+                가입한 이메일을 입력하면 등록된 아이디를 알려드립니다.
             </h4>
             <form onSubmit={handleSubmit}>
                 <div className="input-row">
@@ -56,7 +52,7 @@ function SrhID() {
             )}
         </div>
     </div>
-);
+    );
 }
 
 export default SrhID;

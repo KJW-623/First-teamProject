@@ -46,15 +46,18 @@
     margin-bottom: 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     position: relative;
 }
 
 label {
     width: 110px;
-    margin-right: 10px;
+    
     font-weight: bold;
-    text-align: right;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 input[type="text"] {
@@ -95,3 +98,4 @@ button[type="submit"]:hover {
 .error {
     color: #d32f2f;
 }
+
