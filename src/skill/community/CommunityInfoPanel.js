@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 
 function CommunityInfoPanel({ projectInfo, creatorInfo }) {
     return (
@@ -27,7 +27,10 @@ function CommunityInfoPanel({ projectInfo, creatorInfo }) {
                         <strong>{creatorInfo.reviews}</strong>
                         <span>평가</span>
                     </div>
+                    
                 </div>
+                <Link to='/Review'>
+                <button className="review-btn">창작자 후기 보러가기</button></Link>
             </div>
 
             <div className="info-section">

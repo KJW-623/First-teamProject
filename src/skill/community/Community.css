@@ -370,6 +370,19 @@ h1 {
     background-color: #eee;
 }
 
+.review-btn {
+    background-color: #20e9a5;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    margin-top: 30px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    display: flex;
+    margin-left: 55px;
+}
+
 @media (max-width: 1024px) {
     .chat-layout-container {
         flex-direction: column;
