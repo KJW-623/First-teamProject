@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './Home.css';
 
+//최상단 슬라이드 데이터
 const heroSlides = [
     {
         id: 1,
@@ -25,6 +26,7 @@ const heroSlides = [
     },
 ];
 
+//인기프로젝트 데이터
 const popularProjects = [
     {
         id: 1,
@@ -76,6 +78,7 @@ const popularProjects = [
     }
 ];
 
+//주목할만한 프로젝트 데이터
 const featuredProjects = [
     {
         id: 101,
@@ -103,6 +106,7 @@ const featuredProjects = [
     },
 ];
 
+//추천할만한 프로젝트 데이터
 const notableProjects = [
     {
         id: 201,
@@ -138,6 +142,7 @@ const notableProjects = [
     }
 ];
 
+//에디터 픽 데이터
 const editorsPickProjects = [
     {
         id: 301,
@@ -165,16 +170,18 @@ const editorsPickProjects = [
     }
 ];
 
-
+//최상단 슬라이드
 function HeroSection({ slides }) {
     const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
+    //다음으로 넘기기
     const nextSlide = () => {
         setCurrentSlideIndex((prevIndex) =>
             prevIndex === slides.length - 1 ? 0 : prevIndex + 1
         );
     };
 
+    //이전으로 넘기기
     const prevSlide = () => {
         setCurrentSlideIndex((prevIndex) =>
             prevIndex === 0 ? slides.length - 1 : prevIndex - 1
@@ -183,6 +190,7 @@ function HeroSection({ slides }) {
 
     const currentSlide = slides[currentSlideIndex];
 
+    //최상단 슬라이드 구성
     return (
         <section className="hero-section">
             <div className="hero-slider">
@@ -190,8 +198,10 @@ function HeroSection({ slides }) {
                 <div className="hero-content">
                     <h2>{currentSlide.title}</h2>
                     <p>{currentSlide.subtitle}</p>
+                    {/* 상세 페이지 연결 */}
                     <a href={currentSlide.link} className="fund-button">펀딩 참여</a>
                 </div>
+                {/* 슬라이드 넘기는 버튼 */}
                 <button className="slider-nav prev" onClick={prevSlide}>&#10094;</button>
                 <button className="slider-nav next" onClick={nextSlide}>&#10095;</button>
                 <div className="slide-indicators">
@@ -208,11 +218,13 @@ function HeroSection({ slides }) {
     );
 }
 
+//상품
 function ProjectCard({ project }) {
     const formatAmount = (amount) => {
         return new Intl.NumberFormat('ko-KR').format(amount);
     };
 
+    //양식에 상품 데이터 불러오기
     return (
         <div className="project-card">
                 <img src={project.imageUrl} alt={project.title} className="project-image" />
@@ -230,6 +242,7 @@ function ProjectCard({ project }) {
     );
 }
 
+//인기 프로젝트 구성(6개)
 function PopularProjects({ projects }) {
     return (
         <section className="popular-projects">
@@ -245,6 +258,7 @@ function PopularProjects({ projects }) {
     );
 }
 
+//주목 프로젝트 구성(4개)
 function FeaturedProjects({ projects }) {
     return (
         <section className="featured-projects">
@@ -260,6 +274,7 @@ function FeaturedProjects({ projects }) {
     );
 }
 
+//추천 프로젝트 구성
 function NotableProjects({ projects }) {
     return (
         <section className="notable-projects">
@@ -275,6 +290,7 @@ function NotableProjects({ projects }) {
     );
 }
 
+//에디터 픽 프로젝트 구성
 function EditorsPick({ projects }) {
     return (
         <section className="editors-pick">
@@ -290,14 +306,17 @@ function EditorsPick({ projects }) {
     );
 }
 
+//각 구성 렌더링
 function Home() {
     return (
         <div className="main-page-container">
+            {/* 최상단 슬라이드, 인기 프로젝트, 주목할 만한 프로젝트 */}
             <HeroSection slides={heroSlides} />
             <div className="main-content-wrapper">
                 <PopularProjects projects={popularProjects} />
                 <FeaturedProjects projects={featuredProjects} />
             </div>
+            {/* 추천 프로젝트, 에디터 픽 프로젝트 */}
             <div className="sub-content-wrapper">
             <NotableProjects projects={notableProjects} />
             <EditorsPick projects={editorsPickProjects} />

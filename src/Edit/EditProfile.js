@@ -1,7 +1,9 @@
 import './EditProfile.css'
 import { useState, useEffect } from 'react';
 
+//프로필 편집 기본
 const EditProfile = () => {
+    //프로필 상태 업데이트
     const [profile, setProfile] = useState({
         profileImage: '',
         nickname: '',
@@ -13,9 +15,12 @@ const EditProfile = () => {
         facebook: '',
     });
 
+    //메시지 상태 업데이트
     const [message, setMessage] = useState('');
 
     useEffect(() => {
+        // userProfile 저장된 데이터 불러오기
+        //없으면 else 기본 값 내보냄
         const savedProfile = localStorage.getItem('userProfile');
         if (savedProfile) {
             setProfile(JSON.parse(savedProfile));
@@ -33,6 +38,7 @@ const EditProfile = () => {
         }
     }, []);
 
+    //입력 수정
     const handleChange = (e) => {
         const { name, value } = e.target;
         setProfile(prevProfile => ({
@@ -41,6 +47,7 @@ const EditProfile = () => {
         }));
     };
 
+    //프로필 이미지 수정
     const handleImageChange = (e) => {
         const file = e.target.files[0];
         if (file) {
@@ -55,18 +62,21 @@ const EditProfile = () => {
         }
     };
 
+    //프로필 변경
     const handleSubmit = (e) => {
-        e.preventDefault();
+        e.preventDefault(); //새로고침방지
         localStorage.setItem('userProfile', JSON.stringify(profile));
         setMessage('프로필 정보가 성공적으로 저장되었습니다!');
         setTimeout(() => setMessage(''), 3000);
     };
 
     return (
+        //프로필 편집 상단
         <div className="profile-edit-container">
             <h1 className="profile-edit-title">프로필 편집</h1>
             <p className="profile-edit-subtitle">내 정보를 최신 상태로 유지하세요.</p>
 
+            {/* 프로필 이미지 바꾸기 */}
             <form onSubmit={handleSubmit} className="profile-edit-form">
                 <section className="profile-image-section">
                     <h2>프로필 이미지</h2>
@@ -89,6 +99,7 @@ const EditProfile = () => {
                     </div>
                 </section>
 
+                {/* 기본 인적 사항 */}
                 <section className="profile-info-section">
                     <h2>기본 정보</h2>
                     <div className="form-group">
@@ -138,6 +149,7 @@ const EditProfile = () => {
                     </div>
                 </section>
 
+                {/* SNS 링크 및 아이디 걸기 */}
                 <section className="profile-social-section">
                     <h2>소셜 미디어 및 웹사이트</h2>
                     <div className="form-group">
@@ -186,12 +198,14 @@ const EditProfile = () => {
                     </div>
                 </section>
 
+                {/* 값이 있을 경우 성공 */}
                 {message && <p className="success-message">{message}</p>}
 
                 <div className="form-actions">
                     <button className="Esave-button">
                         변경 사항 저장
                     </button>
+                    {/* 취소하면 돌아감 */}
                     <button className="cancel-button" onClick={() => window.history.back()}>
                         취소
                     </button>
