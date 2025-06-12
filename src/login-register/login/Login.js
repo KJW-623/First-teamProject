@@ -30,7 +30,7 @@ function Login() {
         <div style={{ position: "relative", minHeight: "100vh" }}>
             <div className="auth-bg"></div>
             <div className="Navbar">
-                <img src={whiteLogo} alt="FundFlow Logo" className="navbar-logo" />
+                <img src={process.env.PUBLIC_URL + "/images/whiteLogo.png"} alt="FundFlow Logo" className="navbar-logo" />
                 <h1 className="fundflow-title">FundFlow</h1>
             </div>
             <div className="Container">
