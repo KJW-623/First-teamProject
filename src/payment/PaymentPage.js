@@ -3,25 +3,37 @@ import { useLocation } from 'react-router-dom';
 import './PaymentPage.css';
 
 const PaymentPage = () => {
+    //없으면 빈 객체
     const location = useLocation();
     const { project, selectedReward } = location.state || {};
 
     const initialFundingAmount = selectedReward ? selectedReward.price : 0;
 
+    //후원할 금액
     const [fundingAmount, setFundingAmount] = useState(initialFundingAmount);
+    //약관 동의
     const [agreedToTerms, setAgreedToTerms] = useState(false);
+    //후원자 이름
     const [name, setName] = useState('');
+    //후원자 이메일
     const [email, setEmail] = useState('');
+    //선택 결제 수단
     const [selectedPaymentMethod, setSelectedPaymentMethod] = useState('creditCard');
+    //후원권 코드
     const [rewardCode, setRewardCode] = useState('');
+    //최종 결제 금액
     const [finalPaymentAmount, setFinalPaymentAmount] = useState(0);
+    //제출했는지 판단
     const [isSubmitting, setIsSubmitting] = useState(false);
+    //검사 오류
     const [errors, setErrors] = useState({});
 
+    //fundingAmount 상태 변경시
     useEffect(() => {
         setFinalPaymentAmount(fundingAmount);
     }, [fundingAmount]);
 
+    // 이름, 이메일, 후원코드, 약관동의, 결제수단 상태 업데이트
     const handleNameChange = (e) => setName(e.target.value);
     const handleEmailChange = (e) => setEmail(e.target.value);
     const handleRewardCodeChange = (e) => setRewardCode(e.target.value);
@@ -32,6 +44,7 @@ const PaymentPage = () => {
         setSelectedPaymentMethod(method);
     };
 
+    //폼 오류 확인
     const validateForm = useCallback(() => {
         const newErrors = {};
         if (!name.trim()) {
@@ -49,6 +62,7 @@ const PaymentPage = () => {
         return Object.keys(newErrors).length === 0;
     }, [name, email, agreedToTerms]);
 
+    //기본 제출 방지
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -57,6 +71,7 @@ const PaymentPage = () => {
             return;
         }
 
+        //제출중
         setIsSubmitting(true);
 
         console.log("폼 데이터:", {
@@ -73,17 +88,20 @@ const PaymentPage = () => {
 
         await new Promise(resolve => setTimeout(resolve, 2000));
 
+        //제출 완료
         alert('결제가 성공적으로 요청되었습니다!');
         setIsSubmitting(false);
     };
 
     return (
         <div className="payment-page-container">
+            {/* 프로젝트 후원 상단 */}
             <header className="payment-header">
                 <h1>FundFlow</h1>
                 <h2>프로젝트 후원하기</h2>
             </header>
 
+            {/* 상품 확인란 */}
             <form onSubmit={handleSubmit} className="payment-form">
                 <section className="product-info-section">
                     <h3>선택한 리워드 정보</h3>
@@ -128,6 +146,7 @@ const PaymentPage = () => {
                     </div>
                 </section>
 
+                {/* 후원자 정보 입력란 */}
                 <section className="supporter-info-section">
                     <h3>후원자 정보</h3>
                     <div className="form-group">
@@ -177,6 +196,7 @@ const PaymentPage = () => {
                     </div>
                 </section>
 
+                {/* 결제수단 active탭 */}
                 <section className="payment-method-section">
                     <h3>결제 수단</h3>
                     <div className="payment-options">
