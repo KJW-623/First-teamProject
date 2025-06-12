@@ -18,7 +18,7 @@ const Header = () => {
         <header className="main-header">
             <div className="header-top">
                 <div className="header-logo">
-                    <Link to="/home"><img className="logo" src="/images/mintlogo.png" /></Link>
+                    <Link to="/home"><img className="logo" src="/images/mintLogo.png" alt="Mint Logo" /></Link>
                 </div>
                 <div className="header-actions">
                     <Link to="/ProjectCreate" className="action-link">프로젝트 생성</Link>
