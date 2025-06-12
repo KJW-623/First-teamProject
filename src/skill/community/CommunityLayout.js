@@ -5,6 +5,7 @@ import Community from './Community';
 import CommunityInfoPanel from './CommunityInfoPanel';
 import './Community.css';
 
+//채팅방 데이터
 const dummyChatRooms = [
     {
         id: 'room_min_eui',
@@ -92,21 +93,30 @@ const dummyChatRooms = [
     },
 ]
 
+
 function CommunityLayout() {
+
+
     const [activeChatRoomId, setActiveChatRoomId] = useState(dummyChatRooms[0].id);
+
+    //해당하는 채팅방 데이터 찾기
     const activeChatRoom = dummyChatRooms.find(room => room.id === activeChatRoomId);
 
+    //다른 채팅방 선택시 채팅방 업데이트(변경!)
     const handleSelectChatRoom = (id) => {
         setActiveChatRoomId(id);
     };
 
     return (
         <div className="chat-layout-container">
+
+            {/* 좌측 표시 패널 */}
             <CommunityListPanel chatRooms={dummyChatRooms} activeChatRoomId={activeChatRoomId} onSelectChatRoom={handleSelectChatRoom} />
             {activeChatRoom && (
                 <Community sponsorUserId="user1" projectId={activeChatRoom.projectId} initialMessages={activeChatRoom.messages} />
             )}
             {activeChatRoom && (
+                //우측 표시 패널
                 <CommunityInfoPanel projectInfo={activeChatRoom.projectInfo} creatorInfo={activeChatRoom.creatorInfo} />
             )}
         </div>
