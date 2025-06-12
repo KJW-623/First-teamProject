@@ -55,8 +55,8 @@ const Reviews = [
 ];
 
 const creatorInfo = {
-    avatar: 'https://cdn.pixabay.com/photo/2025/05/26/14/25/pied-flycatcher-9623545_640.jpg',
-    name: '민이',
+    avatar: 'https://img.tumblbug.com/eyJidWNrZXQiOiJ0dW1ibGJ1Zy1pbWctYXNzZXRzIiwia2V5IjoiY292ZXIvODVlYmI1YTYtMWIzZS00M2IzLWEyMDEtMTJiNjIyOTlhOGU1Lzk2NzA1MmNkLWE1NzgtNDI2Yi04NDUyLTMzMzVjMGJlZjQxNC5qcGVnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMjQwLCJoZWlnaHQiOjEyNDAsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX19fQ==',
+    name: '옷을 만드는 사람들',
     level: 40,
     followers: 1234,
 };
