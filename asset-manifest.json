@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/First-teamProject/static/css/main.2bb28a2c.css",
-    "main.js": "/First-teamProject/static/js/main.0f957252.js",
+    "main.css": "/First-teamProject/static/css/main.ab0d7807.css",
+    "main.js": "/First-teamProject/static/js/main.f35d4d99.js",
     "static/js/453.6493aaab.chunk.js": "/First-teamProject/static/js/453.6493aaab.chunk.js",
     "static/media/민트 로고.png": "/First-teamProject/static/media/민트 로고.22968108a8eb1d964684.png",
     "static/media/화이트 로고.png": "/First-teamProject/static/media/화이트 로고.2bba02c9ac98b9bae476.png",
     "index.html": "/First-teamProject/index.html",
-    "main.2bb28a2c.css.map": "/First-teamProject/static/css/main.2bb28a2c.css.map",
-    "main.0f957252.js.map": "/First-teamProject/static/js/main.0f957252.js.map",
+    "main.ab0d7807.css.map": "/First-teamProject/static/css/main.ab0d7807.css.map",
+    "main.f35d4d99.js.map": "/First-teamProject/static/js/main.f35d4d99.js.map",
     "453.6493aaab.chunk.js.map": "/First-teamProject/static/js/453.6493aaab.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2bb28a2c.css",
-    "static/js/main.0f957252.js"
+    "static/css/main.ab0d7807.css",
+    "static/js/main.f35d4d99.js"
   ]
 }
